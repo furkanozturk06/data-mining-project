@@ -8,20 +8,32 @@
 
 ---
 
-## Problem Tanımı
+## Problem Tanımı ve Hedef Belirleme
 
-Müşteri memnuniyetini anlamak, işletmeler için kritik bir öneme sahiptir. Bu projede, farklı platformlardan toplanan müşteri yorumları ve puanlamaları analiz edilerek memnuniyet düzeyi otomatik olarak sınıflandırılmaktadır.
+## Projenin Amacı
 
-**Araştırma Sorusu:** Müşteri yorumlarındaki metin verisi kullanılarak memnuniyet düzeyi (pozitif / negatif / nötr) ne düzeyde doğrulukla tahmin edilebilir?
+Bu projenin amacı, farklı platformlardan toplanan müşteri yorumları ve puanlamaları üzerinde doğal dil işleme ve makine öğrenmesi teknikleri kullanarak otomatik memnuniyet sınıflandırması yapmaktır.
 
----
+## Kapsam
 
-## Proje Hedefleri
+Yelp, Trustpilot, Google Reviews ve çeşitli e-ticaret platformlarından web scraping yöntemiyle müşteri yorumları ve yıldız puanları toplanacaktır. Toplanan veriler üzerinde metin ön işleme, özellik çıkarma ve en az iki farklı makine öğrenmesi modeli uygulanarak karşılaştırmalı analiz yapılacaktır.
 
-- Farklı platformlardan müşteri yorumlarını ve puanlamalarını toplamak
-- Metin verisini analiz edilebilir hale getirmek
-- Duygu analizi modelleri geliştirmek ve karşılaştırmak
-- Sonuçları görselleştirmek ve yorumlamak
+## Araştırma Sorusu
+
+Müşteri yorumlarındaki metin verisi kullanılarak memnuniyet düzeyi (pozitif / negatif / nötr) ne düzeyde doğrulukla tahmin edilebilir?
+
+## Neden Bu Problem?
+
+Günümüzde müşteriler satın alma kararlarını büyük ölçüde diğer kullanıcıların yorumlarına dayanarak vermektedir. Ancak bu yorumların manuel olarak okunup değerlendirilmesi büyük veri hacimlerinde pratik değildir. Otomatik duygu analizi, işletmelerin müşteri memnuniyetini hızlı ve ölçeklenebilir şekilde takip etmesine olanak tanır.
+
+## Hedeflenen Çıktı
+
+| Çıktı | Açıklama |
+|-------|----------|
+| Veri Seti | Farklı platformlardan toplanmış, temizlenmiş ve etiketlenmiş müşteri yorumları ve puanları |
+| Model Karşılaştırması | En az iki farklı makine öğrenmesi modelinin performans analizi |
+| Görselleştirme | Sonuçları gösteren metrikler ve grafikler |
+| Raporlama | Final raporu ve sunum |
 
 ---
 
