@@ -1,0 +1,10 @@
+# Add project dependencies here
+requests
+beautifulsoup4
+pandas
+lxml
+selenium
+webdriver-manager
+matplotlib
+scikit-learn
+nltk
