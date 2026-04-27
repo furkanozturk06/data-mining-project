@@ -14,9 +14,11 @@ import pandas as pd
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
 
 from config import (
     BASE_URL,
@@ -46,7 +48,9 @@ def build_driver() -> webdriver.Chrome:
     options.add_experimental_option("useAutomationExtension", False)
     options.add_argument(f"user-agent={random.choice(USER_AGENTS)}")
 
-    driver = webdriver.Chrome(options=options)
+    # ChromeDriver'ı otomatik indir ve başlat
+    service = Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service, options=options)
 
     # navigator.webdriver özelliğini gizle
     driver.execute_cdp_cmd(
