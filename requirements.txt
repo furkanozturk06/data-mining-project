@@ -4,6 +4,7 @@ pandas
 lxml
 selenium
 webdriver-manager
+undetected-chromedriver
 matplotlib
 scikit-learn
 nltk
