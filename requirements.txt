@@ -6,7 +6,14 @@ selenium
 webdriver-manager
 undetected-chromedriver
 matplotlib
+seaborn
+wordcloud
 scikit-learn
 nltk
+transformers
+torch
+sentencepiece
+lime
+streamlit
 google-play-scraper
 app-store-scraper
