@@ -1,0 +1,1051 @@
+23:04:25 [INFO] ── [1/55] YouTube ──────────────────────────
+23:04:27 [INFO] [GP] YouTube ★1: 200 reviews
+23:04:30 [INFO] [GP] YouTube ★2: 200 reviews
+23:04:33 [INFO] [GP] YouTube ★3: 200 reviews
+23:04:36 [INFO] [GP] YouTube ★4: 200 reviews
+23:04:39 [INFO] [GP] YouTube ★5: 200 reviews
+23:04:41 [INFO] Saved 1000 rows → data/raw/google_play_reviews.csv
+23:04:49 [INFO] [AS] YouTube ★1: 169 reviews (pool: 169)
+23:04:49 [INFO] [AS] YouTube ★2: 35 reviews (pool: 35)
+23:04:49 [INFO] [AS] YouTube ★3: 39 reviews (pool: 39)
+23:04:49 [INFO] [AS] YouTube ★4: 36 reviews (pool: 36)
+23:04:49 [INFO] [AS] YouTube ★5: 200 reviews (pool: 221)
+23:04:49 [INFO] Saved 479 rows → data/raw/app_store_reviews.csv
+23:04:53 [INFO] ── [2/55] Instagram ──────────────────────────
+23:04:54 [INFO] [GP] Instagram ★1: 200 reviews
+23:04:57 [INFO] [GP] Instagram ★2: 200 reviews
+23:05:00 [INFO] [GP] Instagram ★3: 200 reviews
+23:05:03 [INFO] [GP] Instagram ★4: 200 reviews
+23:05:06 [INFO] [GP] Instagram ★5: 200 reviews
+23:05:08 [INFO] Saved 2000 rows → data/raw/google_play_reviews.csv
+23:05:18 [INFO] [AS] Instagram ★1: 200 reviews (pool: 297)
+23:05:18 [INFO] [AS] Instagram ★2: 18 reviews (pool: 18)
+23:05:18 [INFO] [AS] Instagram ★3: 26 reviews (pool: 26)
+23:05:18 [INFO] [AS] Instagram ★4: 13 reviews (pool: 13)
+23:05:18 [INFO] [AS] Instagram ★5: 146 reviews (pool: 146)
+23:05:18 [INFO] Saved 882 rows → data/raw/app_store_reviews.csv
+23:05:22 [INFO] ── [3/55] X ──────────────────────────
+23:05:23 [INFO] [GP] X ★1: 200 reviews
+23:05:26 [INFO] [GP] X ★2: 200 reviews
+23:05:29 [INFO] [GP] X ★3: 200 reviews
+23:05:32 [INFO] [GP] X ★4: 200 reviews
+23:05:35 [INFO] [GP] X ★5: 200 reviews
+23:05:37 [INFO] Saved 3000 rows → data/raw/google_play_reviews.csv
+23:05:46 [INFO] [AS] X ★1: 200 reviews (pool: 241)
+23:05:46 [INFO] [AS] X ★2: 25 reviews (pool: 25)
+23:05:46 [INFO] [AS] X ★3: 25 reviews (pool: 25)
+23:05:46 [INFO] [AS] X ★4: 18 reviews (pool: 18)
+23:05:46 [INFO] [AS] X ★5: 191 reviews (pool: 191)
+23:05:46 [INFO] Saved 1341 rows → data/raw/app_store_reviews.csv
+23:05:50 [INFO] ── [4/55] TikTok ──────────────────────────
+23:05:51 [INFO] [GP] TikTok ★1: 200 reviews
+23:05:54 [INFO] [GP] TikTok ★2: 200 reviews
+23:05:57 [INFO] [GP] TikTok ★3: 200 reviews
+23:06:00 [INFO] [GP] TikTok ★4: 200 reviews
+23:06:03 [INFO] [GP] TikTok ★5: 200 reviews
+23:06:05 [INFO] Saved 4000 rows → data/raw/google_play_reviews.csv
+23:06:05 [WARNING] [AS] TikTok: 0 reviews fetched
+23:06:09 [INFO] ── [5/55] Facebook ──────────────────────────
+23:06:11 [INFO] [GP] Facebook ★1: 200 reviews
+23:06:16 [INFO] [GP] Facebook ★2: 200 reviews
+23:06:19 [INFO] [GP] Facebook ★3: 200 reviews
+23:06:23 [INFO] [GP] Facebook ★4: 200 reviews
+23:06:27 [INFO] [GP] Facebook ★5: 200 reviews
+23:06:29 [INFO] Saved 5000 rows → data/raw/google_play_reviews.csv
+23:06:37 [INFO] [AS] Facebook ★1: 149 reviews (pool: 149)
+23:06:37 [INFO] [AS] Facebook ★2: 19 reviews (pool: 19)
+23:06:37 [INFO] [AS] Facebook ★3: 18 reviews (pool: 18)
+23:06:37 [INFO] [AS] Facebook ★4: 22 reviews (pool: 22)
+23:06:37 [INFO] [AS] Facebook ★5: 200 reviews (pool: 292)
+23:06:37 [INFO] Saved 1749 rows → data/raw/app_store_reviews.csv
+23:06:41 [INFO] ── [6/55] Snapchat ──────────────────────────
+23:06:42 [INFO] [GP] Snapchat ★1: 200 reviews
+23:06:46 [INFO] [GP] Snapchat ★2: 200 reviews
+23:06:50 [INFO] [GP] Snapchat ★3: 200 reviews
+23:06:53 [INFO] [GP] Snapchat ★4: 200 reviews
+23:06:55 [INFO] [GP] Snapchat ★5: 200 reviews
+23:06:58 [INFO] Saved 6000 rows → data/raw/google_play_reviews.csv
+23:07:06 [INFO] [AS] Snapchat ★1: 151 reviews (pool: 151)
+23:07:06 [INFO] [AS] Snapchat ★2: 28 reviews (pool: 28)
+23:07:06 [INFO] [AS] Snapchat ★3: 33 reviews (pool: 33)
+23:07:06 [INFO] [AS] Snapchat ★4: 43 reviews (pool: 43)
+23:07:06 [INFO] [AS] Snapchat ★5: 200 reviews (pool: 245)
+23:07:06 [INFO] Saved 2204 rows → data/raw/app_store_reviews.csv
+23:07:10 [INFO] ── [7/55] Pinterest ──────────────────────────
+23:07:11 [INFO] [GP] Pinterest ★1: 200 reviews
+23:07:16 [INFO] [GP] Pinterest ★2: 200 reviews
+23:07:19 [INFO] [GP] Pinterest ★3: 200 reviews
+23:07:21 [INFO] [GP] Pinterest ★4: 200 reviews
+23:07:24 [INFO] [GP] Pinterest ★5: 200 reviews
+23:07:26 [INFO] Saved 7000 rows → data/raw/google_play_reviews.csv
+23:07:35 [INFO] [AS] Pinterest ★1: 124 reviews (pool: 124)
+23:07:35 [INFO] [AS] Pinterest ★2: 40 reviews (pool: 40)
+23:07:35 [INFO] [AS] Pinterest ★3: 44 reviews (pool: 44)
+23:07:35 [INFO] [AS] Pinterest ★4: 73 reviews (pool: 73)
+23:07:35 [INFO] [AS] Pinterest ★5: 200 reviews (pool: 219)
+23:07:35 [INFO] Saved 2685 rows → data/raw/app_store_reviews.csv
+23:07:39 [INFO] ── [8/55] Telegram ──────────────────────────
+23:07:40 [INFO] [GP] Telegram ★1: 200 reviews
+23:07:43 [INFO] [GP] Telegram ★2: 200 reviews
+23:07:46 [INFO] [GP] Telegram ★3: 200 reviews
+23:07:50 [INFO] [GP] Telegram ★4: 200 reviews
+23:07:53 [INFO] [GP] Telegram ★5: 200 reviews
+23:07:55 [INFO] Saved 8000 rows → data/raw/google_play_reviews.csv
+23:08:03 [INFO] [AS] Telegram ★1: 200 reviews (pool: 293)
+23:08:03 [INFO] [AS] Telegram ★2: 41 reviews (pool: 41)
+23:08:03 [INFO] [AS] Telegram ★3: 31 reviews (pool: 31)
+23:08:03 [INFO] [AS] Telegram ★4: 27 reviews (pool: 27)
+23:08:03 [INFO] [AS] Telegram ★5: 108 reviews (pool: 108)
+23:08:03 [INFO] Saved 3092 rows → data/raw/app_store_reviews.csv
+23:08:07 [INFO] ── [9/55] WhatsApp Messenger ──────────────────────────
+23:08:09 [INFO] [GP] WhatsApp Messenger ★1: 200 reviews
+23:08:13 [INFO] [GP] WhatsApp Messenger ★2: 200 reviews
+23:08:16 [INFO] [GP] WhatsApp Messenger ★3: 200 reviews
+23:08:19 [INFO] [GP] WhatsApp Messenger ★4: 200 reviews
+23:08:23 [INFO] [GP] WhatsApp Messenger ★5: 200 reviews
+23:08:25 [INFO] Saved 9000 rows → data/raw/google_play_reviews.csv
+23:08:34 [INFO] [AS] WhatsApp Messenger ★1: 200 reviews (pool: 316)
+23:08:34 [INFO] [AS] WhatsApp Messenger ★2: 37 reviews (pool: 37)
+23:08:34 [INFO] [AS] WhatsApp Messenger ★3: 35 reviews (pool: 35)
+23:08:34 [INFO] [AS] WhatsApp Messenger ★4: 17 reviews (pool: 17)
+23:08:34 [INFO] [AS] WhatsApp Messenger ★5: 95 reviews (pool: 95)
+23:08:34 [INFO] Saved 3476 rows → data/raw/app_store_reviews.csv
+23:08:38 [INFO] ── [10/55] Threads ──────────────────────────
+23:08:42 [INFO] [GP] Threads ★1: 200 reviews
+23:08:46 [INFO] [GP] Threads ★2: 200 reviews
+23:08:49 [INFO] [GP] Threads ★3: 200 reviews
+23:08:53 [INFO] [GP] Threads ★4: 200 reviews
+23:08:57 [INFO] [GP] Threads ★5: 200 reviews
+23:08:59 [INFO] Saved 10000 rows → data/raw/google_play_reviews.csv
+23:08:59 [WARNING] [AS] Threads: 0 reviews fetched
+23:09:03 [INFO] ── [11/55] Hepsiburada ──────────────────────────
+23:09:04 [INFO] [GP] Hepsiburada ★1: 0 reviews
+23:09:06 [INFO] [GP] Hepsiburada ★2: 0 reviews
+23:09:08 [INFO] [GP] Hepsiburada ★3: 0 reviews
+23:09:11 [INFO] [GP] Hepsiburada ★4: 0 reviews
+23:09:13 [INFO] [GP] Hepsiburada ★5: 0 reviews
+23:09:15 [WARNING] [AS] Hepsiburada: 0 reviews fetched
+23:09:19 [INFO] ── [12/55] Trendyol ──────────────────────────
+23:09:20 [INFO] [GP] Trendyol ★1: 0 reviews
+23:09:22 [INFO] [GP] Trendyol ★2: 0 reviews
+23:09:24 [INFO] [GP] Trendyol ★3: 0 reviews
+23:09:26 [INFO] [GP] Trendyol ★4: 0 reviews
+23:09:29 [INFO] [GP] Trendyol ★5: 0 reviews
+23:09:31 [WARNING] [AS] Trendyol: 0 reviews fetched
+23:09:35 [INFO] ── [13/55] n11 ──────────────────────────
+23:09:35 [INFO] [GP] n11 ★1: 0 reviews
+23:09:37 [INFO] [GP] n11 ★2: 0 reviews
+23:09:40 [INFO] [GP] n11 ★3: 0 reviews
+23:09:42 [INFO] [GP] n11 ★4: 0 reviews
+23:09:44 [INFO] [GP] n11 ★5: 0 reviews
+23:09:47 [WARNING] [AS] n11: 0 reviews fetched
+23:09:51 [INFO] ── [14/55] Amazon Alışveriş ──────────────────────────
+23:09:52 [INFO] [GP] Amazon Alışveriş ★1: 200 reviews
+23:09:55 [INFO] [GP] Amazon Alışveriş ★2: 200 reviews
+23:09:58 [INFO] [GP] Amazon Alışveriş ★3: 200 reviews
+23:10:01 [INFO] [GP] Amazon Alışveriş ★4: 200 reviews
+23:10:04 [INFO] [GP] Amazon Alışveriş ★5: 200 reviews
+23:10:06 [INFO] Saved 11000 rows → data/raw/google_play_reviews.csv
+23:10:14 [INFO] [AS] Amazon Alışveriş ★1: 200 reviews (pool: 343)
+23:10:14 [INFO] [AS] Amazon Alışveriş ★2: 30 reviews (pool: 30)
+23:10:14 [INFO] [AS] Amazon Alışveriş ★3: 31 reviews (pool: 31)
+23:10:14 [INFO] [AS] Amazon Alışveriş ★4: 21 reviews (pool: 21)
+23:10:14 [INFO] [AS] Amazon Alışveriş ★5: 75 reviews (pool: 75)
+23:10:14 [INFO] Saved 3833 rows → data/raw/app_store_reviews.csv
+23:10:18 [INFO] ── [15/55] Çiçeksepeti ──────────────────────────
+23:10:18 [INFO] [GP] Çiçeksepeti ★1: 0 reviews
+23:10:21 [INFO] [GP] Çiçeksepeti ★2: 0 reviews
+23:10:23 [INFO] [GP] Çiçeksepeti ★3: 0 reviews
+23:10:25 [INFO] [GP] Çiçeksepeti ★4: 0 reviews
+23:10:27 [INFO] [GP] Çiçeksepeti ★5: 0 reviews
+23:10:30 [WARNING] [AS] Çiçeksepeti: 0 reviews fetched
+23:10:34 [INFO] ── [16/55] Dolap ──────────────────────────
+23:10:35 [INFO] [GP] Dolap ★1: 200 reviews
+23:10:37 [INFO] [GP] Dolap ★2: 200 reviews
+23:10:40 [INFO] [GP] Dolap ★3: 200 reviews
+23:10:43 [INFO] [GP] Dolap ★4: 200 reviews
+23:10:46 [INFO] [GP] Dolap ★5: 200 reviews
+23:10:48 [INFO] Saved 12000 rows → data/raw/google_play_reviews.csv
+23:10:48 [WARNING] [AS] Dolap: 0 reviews fetched
+23:10:52 [INFO] ── [17/55] Sahibinden ──────────────────────────
+23:10:52 [INFO] [GP] Sahibinden ★1: 0 reviews
+23:10:55 [INFO] [GP] Sahibinden ★2: 0 reviews
+23:10:57 [INFO] [GP] Sahibinden ★3: 0 reviews
+23:10:59 [INFO] [GP] Sahibinden ★4: 0 reviews
+23:11:01 [INFO] [GP] Sahibinden ★5: 0 reviews
+23:11:04 [WARNING] [AS] Sahibinden: 0 reviews fetched
+23:11:08 [INFO] ── [18/55] Pazarama ──────────────────────────
+23:11:08 [INFO] [GP] Pazarama ★1: 0 reviews
+23:11:10 [INFO] [GP] Pazarama ★2: 0 reviews
+23:11:13 [INFO] [GP] Pazarama ★3: 0 reviews
+23:11:15 [INFO] [GP] Pazarama ★4: 0 reviews
+23:11:17 [INFO] [GP] Pazarama ★5: 0 reviews
+23:11:19 [WARNING] [AS] Pazarama: 0 reviews fetched
+23:11:23 [INFO] ── [19/55] Boyner ──────────────────────────
+23:11:24 [INFO] [GP] Boyner ★1: 0 reviews
+23:11:26 [INFO] [GP] Boyner ★2: 0 reviews
+23:11:28 [INFO] [GP] Boyner ★3: 0 reviews
+23:11:31 [INFO] [GP] Boyner ★4: 0 reviews
+23:11:33 [INFO] [GP] Boyner ★5: 0 reviews
+23:11:35 [WARNING] [AS] Boyner: 0 reviews fetched
+23:11:39 [INFO] ── [20/55] DeFacto ──────────────────────────
+23:11:40 [INFO] [GP] DeFacto ★1: 200 reviews
+23:11:43 [INFO] [GP] DeFacto ★2: 200 reviews
+23:11:45 [INFO] [GP] DeFacto ★3: 200 reviews
+23:11:48 [INFO] [GP] DeFacto ★4: 200 reviews
+23:11:51 [INFO] [GP] DeFacto ★5: 200 reviews
+23:11:53 [INFO] Saved 13000 rows → data/raw/google_play_reviews.csv
+23:11:53 [WARNING] [AS] DeFacto: 0 reviews fetched
+23:11:57 [INFO] ── [21/55] Yemeksepeti ──────────────────────────
+23:11:57 [INFO] [GP] Yemeksepeti ★1: 0 reviews
+23:12:00 [INFO] [GP] Yemeksepeti ★2: 0 reviews
+23:12:02 [INFO] [GP] Yemeksepeti ★3: 0 reviews
+23:12:05 [INFO] [GP] Yemeksepeti ★4: 0 reviews
+23:12:07 [INFO] [GP] Yemeksepeti ★5: 0 reviews
+23:12:09 [WARNING] [AS] Yemeksepeti: 0 reviews fetched
+23:12:13 [INFO] ── [22/55] Trendyol Go ──────────────────────────
+23:12:13 [INFO] [GP] Trendyol Go ★1: 0 reviews
+23:12:16 [INFO] [GP] Trendyol Go ★2: 0 reviews
+23:12:18 [INFO] [GP] Trendyol Go ★3: 0 reviews
+23:12:20 [INFO] [GP] Trendyol Go ★4: 0 reviews
+23:12:22 [INFO] [GP] Trendyol Go ★5: 0 reviews
+23:12:25 [WARNING] [AS] Trendyol Go: 0 reviews fetched
+23:12:29 [INFO] ── [23/55] Getir ──────────────────────────
+23:12:29 [INFO] [GP] Getir ★1: 0 reviews
+23:12:31 [INFO] [GP] Getir ★2: 0 reviews
+23:12:34 [INFO] [GP] Getir ★3: 0 reviews
+23:12:36 [INFO] [GP] Getir ★4: 0 reviews
+23:12:38 [INFO] [GP] Getir ★5: 0 reviews
+23:12:41 [WARNING] [AS] Getir: 0 reviews fetched
+23:12:45 [INFO] ── [24/55] Tıkla Gelsin ──────────────────────────
+23:12:45 [INFO] [GP] Tıkla Gelsin ★1: 200 reviews
+23:12:48 [INFO] [GP] Tıkla Gelsin ★2: 32 reviews
+23:12:52 [INFO] [GP] Tıkla Gelsin ★3: 22 reviews
+23:12:55 [INFO] [GP] Tıkla Gelsin ★4: 18 reviews
+23:12:58 [INFO] [GP] Tıkla Gelsin ★5: 121 reviews
+23:13:01 [INFO] Saved 13393 rows → data/raw/google_play_reviews.csv
+23:13:01 [WARNING] [AS] Tıkla Gelsin: 0 reviews fetched
+23:13:05 [INFO] ── [25/55] İsteGelsin ──────────────────────────
+23:13:05 [INFO] [GP] İsteGelsin ★1: 0 reviews
+23:13:07 [INFO] [GP] İsteGelsin ★2: 0 reviews
+23:13:10 [INFO] [GP] İsteGelsin ★3: 0 reviews
+23:13:12 [INFO] [GP] İsteGelsin ★4: 0 reviews
+23:13:14 [INFO] [GP] İsteGelsin ★5: 0 reviews
+23:13:16 [WARNING] [AS] İsteGelsin: 0 reviews fetched
+23:13:20 [INFO] ── [26/55] Domino's Pizza Türkiye ──────────────────────────
+23:13:21 [INFO] [GP] Domino's Pizza Türkiye ★1: 0 reviews
+23:13:23 [INFO] [GP] Domino's Pizza Türkiye ★2: 0 reviews
+23:13:25 [INFO] [GP] Domino's Pizza Türkiye ★3: 0 reviews
+23:13:27 [INFO] [GP] Domino's Pizza Türkiye ★4: 0 reviews
+23:13:29 [INFO] [GP] Domino's Pizza Türkiye ★5: 0 reviews
+23:13:32 [WARNING] [AS] Domino's Pizza Türkiye: 0 reviews fetched
+23:13:36 [INFO] ── [27/55] McDonald's ──────────────────────────
+23:13:36 [INFO] [GP] McDonald's ★1: 200 reviews
+23:13:40 [INFO] [GP] McDonald's ★2: 200 reviews
+23:13:43 [INFO] [GP] McDonald's ★3: 200 reviews
+23:13:46 [INFO] [GP] McDonald's ★4: 181 reviews
+23:13:49 [INFO] [GP] McDonald's ★5: 200 reviews
+23:13:51 [INFO] Saved 14374 rows → data/raw/google_play_reviews.csv
+23:13:52 [WARNING] [AS] McDonald's: 0 reviews fetched
+23:13:56 [INFO] ── [28/55] KFC Türkiye ──────────────────────────
+23:13:56 [INFO] [GP] KFC Türkiye ★1: 0 reviews
+23:13:58 [INFO] [GP] KFC Türkiye ★2: 0 reviews
+23:14:00 [INFO] [GP] KFC Türkiye ★3: 0 reviews
+23:14:03 [INFO] [GP] KFC Türkiye ★4: 0 reviews
+23:14:05 [INFO] [GP] KFC Türkiye ★5: 0 reviews
+23:14:07 [WARNING] [AS] KFC Türkiye: 0 reviews fetched
+23:14:11 [INFO] ── [29/55] BİM Online ──────────────────────────
+23:14:11 [INFO] [GP] BİM Online ★1: 0 reviews
+23:14:14 [INFO] [GP] BİM Online ★2: 0 reviews
+23:14:16 [INFO] [GP] BİM Online ★3: 0 reviews
+23:14:18 [INFO] [GP] BİM Online ★4: 0 reviews
+23:14:20 [INFO] [GP] BİM Online ★5: 0 reviews
+23:14:23 [WARNING] [AS] BİM Online: 0 reviews fetched
+23:14:27 [INFO] ── [30/55] CEPTE BİM ──────────────────────────
+23:14:27 [INFO] [GP] CEPTE BİM ★1: 0 reviews
+23:14:29 [INFO] [GP] CEPTE BİM ★2: 0 reviews
+23:14:31 [INFO] [GP] CEPTE BİM ★3: 0 reviews
+23:14:34 [INFO] [GP] CEPTE BİM ★4: 0 reviews
+23:14:36 [INFO] [GP] CEPTE BİM ★5: 0 reviews
+23:14:38 [WARNING] [AS] CEPTE BİM: 0 reviews fetched
+23:14:42 [INFO] ── [31/55] Cepte ŞOK ──────────────────────────
+23:14:42 [INFO] [GP] Cepte ŞOK ★1: 0 reviews
+23:14:45 [INFO] [GP] Cepte ŞOK ★2: 0 reviews
+23:14:47 [INFO] [GP] Cepte ŞOK ★3: 0 reviews
+23:14:49 [INFO] [GP] Cepte ŞOK ★4: 0 reviews
+23:14:51 [INFO] [GP] Cepte ŞOK ★5: 0 reviews
+23:14:54 [WARNING] [AS] Cepte ŞOK: 0 reviews fetched
+23:14:58 [INFO] ── [32/55] Migros ──────────────────────────
+23:14:58 [INFO] [GP] Migros ★1: 0 reviews
+23:15:01 [INFO] [GP] Migros ★2: 0 reviews
+23:15:03 [INFO] [GP] Migros ★3: 0 reviews
+23:15:05 [INFO] [GP] Migros ★4: 0 reviews
+23:15:07 [INFO] [GP] Migros ★5: 0 reviews
+23:15:09 [WARNING] [AS] Migros: 0 reviews fetched
+23:15:13 [INFO] ── [33/55] A101 ──────────────────────────
+23:15:14 [INFO] [GP] A101 ★1: 0 reviews
+23:15:16 [INFO] [GP] A101 ★2: 0 reviews
+23:15:19 [INFO] [GP] A101 ★3: 0 reviews
+23:15:21 [INFO] [GP] A101 ★4: 0 reviews
+23:15:23 [INFO] [GP] A101 ★5: 0 reviews
+23:15:26 [WARNING] [AS] A101: 0 reviews fetched
+23:15:30 [INFO] ── [34/55] CarrefourSA ──────────────────────────
+23:15:30 [INFO] [GP] CarrefourSA ★1: 0 reviews
+23:15:32 [INFO] [GP] CarrefourSA ★2: 0 reviews
+23:15:34 [INFO] [GP] CarrefourSA ★3: 0 reviews
+23:15:37 [INFO] [GP] CarrefourSA ★4: 0 reviews
+23:15:39 [INFO] [GP] CarrefourSA ★5: 0 reviews
+23:15:41 [WARNING] [AS] CarrefourSA: 0 reviews fetched
+23:15:45 [INFO] ── [35/55] Tarım Kredi Birlik ──────────────────────────
+23:15:46 [INFO] [GP] Tarım Kredi Birlik ★1: 0 reviews
+23:15:48 [INFO] [GP] Tarım Kredi Birlik ★2: 0 reviews
+23:15:50 [INFO] [GP] Tarım Kredi Birlik ★3: 0 reviews
+23:15:52 [INFO] [GP] Tarım Kredi Birlik ★4: 0 reviews
+23:15:55 [INFO] [GP] Tarım Kredi Birlik ★5: 0 reviews
+23:15:57 [WARNING] [AS] Tarım Kredi Birlik: 0 reviews fetched
+23:16:01 [INFO] ── [36/55] Watsons Türkiye ──────────────────────────
+23:16:01 [INFO] [GP] Watsons Türkiye ★1: 0 reviews
+23:16:04 [INFO] [GP] Watsons Türkiye ★2: 0 reviews
+23:16:06 [INFO] [GP] Watsons Türkiye ★3: 0 reviews
+23:16:08 [INFO] [GP] Watsons Türkiye ★4: 0 reviews
+23:16:11 [INFO] [GP] Watsons Türkiye ★5: 0 reviews
+23:16:13 [WARNING] [AS] Watsons Türkiye: 0 reviews fetched
+23:16:17 [INFO] ── [37/55] Gratis ──────────────────────────
+23:16:17 [INFO] [GP] Gratis ★1: 200 reviews
+23:16:20 [INFO] [GP] Gratis ★2: 200 reviews
+23:16:23 [INFO] [GP] Gratis ★3: 200 reviews
+23:16:25 [INFO] [GP] Gratis ★4: 200 reviews
+23:16:28 [INFO] [GP] Gratis ★5: 200 reviews
+23:16:30 [INFO] Saved 15374 rows → data/raw/google_play_reviews.csv
+23:16:30 [WARNING] [AS] Gratis: 0 reviews fetched
+23:16:34 [INFO] ── [38/55] LinkedIn ──────────────────────────
+23:16:36 [INFO] [GP] LinkedIn ★1: 200 reviews
+23:16:39 [INFO] [GP] LinkedIn ★2: 200 reviews
+23:16:42 [INFO] [GP] LinkedIn ★3: 200 reviews
+23:16:46 [INFO] [GP] LinkedIn ★4: 200 reviews
+23:16:48 [INFO] [GP] LinkedIn ★5: 200 reviews
+23:16:51 [INFO] Saved 16374 rows → data/raw/google_play_reviews.csv
+23:16:59 [INFO] [AS] LinkedIn ★1: 200 reviews (pool: 251)
+23:16:59 [INFO] [AS] LinkedIn ★2: 34 reviews (pool: 34)
+23:16:59 [INFO] [AS] LinkedIn ★3: 37 reviews (pool: 37)
+23:16:59 [INFO] [AS] LinkedIn ★4: 26 reviews (pool: 26)
+23:16:59 [INFO] [AS] LinkedIn ★5: 152 reviews (pool: 152)
+23:16:59 [INFO] Saved 4282 rows → data/raw/app_store_reviews.csv
+23:17:03 [INFO] ── [39/55] Kariyer.net ──────────────────────────
+23:17:03 [INFO] [GP] Kariyer.net ★1: 0 reviews
+23:17:06 [INFO] [GP] Kariyer.net ★2: 0 reviews
+23:17:08 [INFO] [GP] Kariyer.net ★3: 0 reviews
+23:17:10 [INFO] [GP] Kariyer.net ★4: 0 reviews
+23:17:12 [INFO] [GP] Kariyer.net ★5: 0 reviews
+23:17:14 [WARNING] [AS] Kariyer.net: 0 reviews fetched
+23:17:18 [INFO] ── [40/55] İşin Olsun ──────────────────────────
+23:17:19 [INFO] [GP] İşin Olsun ★1: 0 reviews
+23:17:21 [INFO] [GP] İşin Olsun ★2: 0 reviews
+23:17:23 [INFO] [GP] İşin Olsun ★3: 0 reviews
+23:17:25 [INFO] [GP] İşin Olsun ★4: 0 reviews
+23:17:28 [INFO] [GP] İşin Olsun ★5: 0 reviews
+23:17:30 [WARNING] [AS] İşin Olsun: 0 reviews fetched
+23:17:34 [INFO] ── [41/55] İŞKUR ──────────────────────────
+23:17:34 [INFO] [GP] İŞKUR ★1: 0 reviews
+23:17:37 [INFO] [GP] İŞKUR ★2: 0 reviews
+23:17:39 [INFO] [GP] İŞKUR ★3: 0 reviews
+23:17:41 [INFO] [GP] İŞKUR ★4: 0 reviews
+23:17:44 [INFO] [GP] İŞKUR ★5: 0 reviews
+23:17:46 [WARNING] [AS] İŞKUR: 0 reviews fetched
+23:17:50 [INFO] ── [42/55] Eleman.net ──────────────────────────
+23:17:50 [INFO] [GP] Eleman.net ★1: 0 reviews
+23:17:52 [INFO] [GP] Eleman.net ★2: 0 reviews
+23:17:55 [INFO] [GP] Eleman.net ★3: 0 reviews
+23:17:57 [INFO] [GP] Eleman.net ★4: 0 reviews
+23:17:59 [INFO] [GP] Eleman.net ★5: 0 reviews
+23:18:01 [WARNING] [AS] Eleman.net: 0 reviews fetched
+23:18:05 [INFO] ── [43/55] Yenibiriş ──────────────────────────
+23:18:06 [INFO] [GP] Yenibiriş ★1: 0 reviews
+23:18:08 [INFO] [GP] Yenibiriş ★2: 0 reviews
+23:18:10 [INFO] [GP] Yenibiriş ★3: 0 reviews
+23:18:13 [INFO] [GP] Yenibiriş ★4: 0 reviews
+23:18:15 [INFO] [GP] Yenibiriş ★5: 0 reviews
+23:18:17 [WARNING] [AS] Yenibiriş: 0 reviews fetched
+23:18:21 [INFO] ── [44/55] Ziraat Mobil ──────────────────────────
+23:18:22 [INFO] [GP] Ziraat Mobil ★1: 200 reviews
+23:18:25 [INFO] [GP] Ziraat Mobil ★2: 200 reviews
+23:18:27 [INFO] [GP] Ziraat Mobil ★3: 200 reviews
+23:18:30 [INFO] [GP] Ziraat Mobil ★4: 200 reviews
+23:18:33 [INFO] [GP] Ziraat Mobil ★5: 200 reviews
+23:18:35 [INFO] Saved 17374 rows → data/raw/google_play_reviews.csv
+23:18:35 [WARNING] [AS] Ziraat Mobil: 0 reviews fetched
+23:18:39 [INFO] ── [45/55] Albaraka Mobil ──────────────────────────
+23:18:39 [INFO] [GP] Albaraka Mobil ★1: 0 reviews
+23:18:42 [INFO] [GP] Albaraka Mobil ★2: 0 reviews
+23:18:44 [INFO] [GP] Albaraka Mobil ★3: 0 reviews
+23:18:46 [INFO] [GP] Albaraka Mobil ★4: 0 reviews
+23:18:48 [INFO] [GP] Albaraka Mobil ★5: 0 reviews
+23:18:50 [WARNING] [AS] Albaraka Mobil: 0 reviews fetched
+23:18:54 [INFO] ── [46/55] Kuveyt Türk Mobil ──────────────────────────
+23:18:55 [INFO] [GP] Kuveyt Türk Mobil ★1: 200 reviews
+23:18:58 [INFO] [GP] Kuveyt Türk Mobil ★2: 200 reviews
+23:19:00 [INFO] [GP] Kuveyt Türk Mobil ★3: 200 reviews
+23:19:03 [INFO] [GP] Kuveyt Türk Mobil ★4: 200 reviews
+23:19:05 [INFO] [GP] Kuveyt Türk Mobil ★5: 200 reviews
+23:19:07 [INFO] Saved 18374 rows → data/raw/google_play_reviews.csv
+23:19:08 [WARNING] [AS] Kuveyt Türk Mobil: 0 reviews fetched
+23:19:12 [INFO] ── [47/55] Akbank ──────────────────────────
+23:19:12 [INFO] [GP] Akbank ★1: 0 reviews
+23:19:14 [INFO] [GP] Akbank ★2: 0 reviews
+23:19:17 [INFO] [GP] Akbank ★3: 0 reviews
+23:19:19 [INFO] [GP] Akbank ★4: 0 reviews
+23:19:21 [INFO] [GP] Akbank ★5: 0 reviews
+23:19:24 [WARNING] [AS] Akbank: 0 reviews fetched
+23:19:28 [INFO] ── [48/55] İşCep ──────────────────────────
+23:19:28 [INFO] [GP] İşCep ★1: 0 reviews
+23:19:30 [INFO] [GP] İşCep ★2: 0 reviews
+23:19:33 [INFO] [GP] İşCep ★3: 0 reviews
+23:19:35 [INFO] [GP] İşCep ★4: 0 reviews
+23:19:37 [INFO] [GP] İşCep ★5: 0 reviews
+23:19:39 [WARNING] [AS] İşCep: 0 reviews fetched
+23:19:43 [INFO] ── [49/55] Garanti BBVA Mobile ──────────────────────────
+23:19:44 [INFO] [GP] Garanti BBVA Mobile ★1: 200 reviews
+23:19:47 [INFO] [GP] Garanti BBVA Mobile ★2: 200 reviews
+23:19:49 [INFO] [GP] Garanti BBVA Mobile ★3: 200 reviews
+23:19:52 [INFO] [GP] Garanti BBVA Mobile ★4: 200 reviews
+23:19:55 [INFO] [GP] Garanti BBVA Mobile ★5: 200 reviews
+23:19:57 [INFO] Saved 19374 rows → data/raw/google_play_reviews.csv
+23:19:57 [WARNING] [AS] Garanti BBVA Mobile: 0 reviews fetched
+23:20:01 [INFO] ── [50/55] Yapı Kredi Mobile ──────────────────────────
+23:20:02 [INFO] [GP] Yapı Kredi Mobile ★1: 200 reviews
+23:20:05 [INFO] [GP] Yapı Kredi Mobile ★2: 200 reviews
+23:20:08 [INFO] [GP] Yapı Kredi Mobile ★3: 200 reviews
+23:20:10 [INFO] [GP] Yapı Kredi Mobile ★4: 200 reviews
+23:20:13 [INFO] [GP] Yapı Kredi Mobile ★5: 200 reviews
+23:20:15 [INFO] Saved 20374 rows → data/raw/google_play_reviews.csv
+23:20:15 [WARNING] [AS] Yapı Kredi Mobile: 0 reviews fetched
+23:20:19 [INFO] ── [51/55] QNB Finansbank ──────────────────────────
+23:20:20 [INFO] [GP] QNB Finansbank ★1: 200 reviews
+23:20:24 [INFO] [GP] QNB Finansbank ★2: 200 reviews
+23:20:26 [INFO] [GP] QNB Finansbank ★3: 200 reviews
+23:20:29 [INFO] [GP] QNB Finansbank ★4: 200 reviews
+23:20:32 [INFO] [GP] QNB Finansbank ★5: 200 reviews
+23:20:34 [INFO] Saved 21374 rows → data/raw/google_play_reviews.csv
+23:20:34 [WARNING] [AS] QNB Finansbank: 0 reviews fetched
+23:20:38 [INFO] ── [52/55] Enpara.com ──────────────────────────
+23:20:39 [INFO] [GP] Enpara.com ★1: 0 reviews
+23:20:41 [INFO] [GP] Enpara.com ★2: 0 reviews
+23:20:43 [INFO] [GP] Enpara.com ★3: 0 reviews
+23:20:45 [INFO] [GP] Enpara.com ★4: 0 reviews
+23:20:47 [INFO] [GP] Enpara.com ★5: 0 reviews
+23:20:50 [WARNING] [AS] Enpara.com: 0 reviews fetched
+23:20:54 [INFO] ── [53/55] VakıfBank Mobil ──────────────────────────
+23:20:54 [INFO] [GP] VakıfBank Mobil ★1: 200 reviews
+23:20:57 [INFO] [GP] VakıfBank Mobil ★2: 200 reviews
+23:21:00 [INFO] [GP] VakıfBank Mobil ★3: 200 reviews
+23:21:03 [INFO] [GP] VakıfBank Mobil ★4: 200 reviews
+23:21:05 [INFO] [GP] VakıfBank Mobil ★5: 200 reviews
+23:21:08 [INFO] Saved 22374 rows → data/raw/google_play_reviews.csv
+23:21:08 [WARNING] [AS] VakıfBank Mobil: 0 reviews fetched
+23:21:12 [INFO] ── [54/55] Halkbank Mobil ──────────────────────────
+23:21:12 [INFO] [GP] Halkbank Mobil ★1: 0 reviews
+23:21:15 [INFO] [GP] Halkbank Mobil ★2: 0 reviews
+23:21:17 [INFO] [GP] Halkbank Mobil ★3: 0 reviews
+23:21:19 [INFO] [GP] Halkbank Mobil ★4: 0 reviews
+23:21:21 [INFO] [GP] Halkbank Mobil ★5: 0 reviews
+23:21:24 [WARNING] [AS] Halkbank Mobil: 0 reviews fetched
+23:21:28 [INFO] ── [55/55] DenizBank ──────────────────────────
+23:21:28 [INFO] [GP] DenizBank ★1: 200 reviews
+23:21:31 [INFO] [GP] DenizBank ★2: 200 reviews
+23:21:33 [INFO] [GP] DenizBank ★3: 200 reviews
+23:21:36 [INFO] [GP] DenizBank ★4: 200 reviews
+23:21:39 [INFO] [GP] DenizBank ★5: 200 reviews
+23:21:41 [INFO] Saved 23374 rows → data/raw/google_play_reviews.csv
+23:21:41 [WARNING] [AS] DenizBank: 0 reviews fetched
+23:21:41 [INFO] ============================================================
+23:21:41 [INFO] Google Play total rows this run: 23374
+23:21:41 [INFO] Google Play star distribution:
+rating
+1    4800
+2    4632
+3    4622
+4    4599
+5    4721
+23:21:41 [INFO] App Store total rows this run: 4282
+23:21:41 [INFO] App Store star distribution:
+rating
+1    1793
+2     307
+3     319
+4     296
+5    1567
+00:02:48 [INFO] [GP] Hepsiburada ★1: 200 reviews
+00:02:51 [INFO] [GP] Hepsiburada ★2: 200 reviews
+00:02:54 [INFO] [GP] Hepsiburada ★3: 200 reviews
+00:02:56 [INFO] [GP] Hepsiburada ★4: 200 reviews
+00:02:59 [INFO] [GP] Hepsiburada ★5: 200 reviews
+00:03:04 [INFO] [GP] Trendyol ★1: 200 reviews
+00:03:07 [INFO] [GP] Trendyol ★2: 200 reviews
+00:03:10 [INFO] [GP] Trendyol ★3: 200 reviews
+00:03:12 [INFO] [GP] Trendyol ★4: 200 reviews
+00:03:15 [INFO] [GP] Trendyol ★5: 200 reviews
+00:03:21 [INFO] [GP] n11 ★1: 200 reviews
+00:03:23 [INFO] [GP] n11 ★2: 200 reviews
+00:03:26 [INFO] [GP] n11 ★3: 200 reviews
+00:03:29 [INFO] [GP] n11 ★4: 200 reviews
+00:03:31 [INFO] [GP] n11 ★5: 200 reviews
+00:03:37 [INFO] [GP] Çiçeksepeti ★1: 200 reviews
+00:03:39 [INFO] [GP] Çiçeksepeti ★2: 200 reviews
+00:03:42 [INFO] [GP] Çiçeksepeti ★3: 200 reviews
+00:03:45 [INFO] [GP] Çiçeksepeti ★4: 200 reviews
+00:03:47 [INFO] [GP] Çiçeksepeti ★5: 200 reviews
+00:03:53 [INFO] [GP] Sahibinden ★1: 200 reviews
+00:03:56 [INFO] [GP] Sahibinden ★2: 200 reviews
+00:03:59 [INFO] [GP] Sahibinden ★3: 200 reviews
+00:04:01 [INFO] [GP] Sahibinden ★4: 200 reviews
+00:04:04 [INFO] [GP] Sahibinden ★5: 200 reviews
+00:04:09 [INFO] [GP] Pazarama ★1: 200 reviews
+00:04:12 [INFO] [GP] Pazarama ★2: 200 reviews
+00:04:14 [INFO] [GP] Pazarama ★3: 200 reviews
+00:04:17 [INFO] [GP] Pazarama ★4: 200 reviews
+00:04:20 [INFO] [GP] Pazarama ★5: 200 reviews
+00:04:26 [INFO] [GP] Boyner ★1: 200 reviews
+00:04:28 [INFO] [GP] Boyner ★2: 200 reviews
+00:04:31 [INFO] [GP] Boyner ★3: 200 reviews
+00:04:34 [INFO] [GP] Boyner ★4: 200 reviews
+00:04:36 [INFO] [GP] Boyner ★5: 200 reviews
+00:04:42 [INFO] [GP] Yemeksepeti ★1: 200 reviews
+00:04:45 [INFO] [GP] Yemeksepeti ★2: 200 reviews
+00:04:47 [INFO] [GP] Yemeksepeti ★3: 200 reviews
+00:04:50 [INFO] [GP] Yemeksepeti ★4: 200 reviews
+00:04:53 [INFO] [GP] Yemeksepeti ★5: 200 reviews
+00:04:59 [INFO] [GP] Trendyol Go ★1: 200 reviews
+00:05:01 [INFO] [GP] Trendyol Go ★2: 200 reviews
+00:05:04 [INFO] [GP] Trendyol Go ★3: 200 reviews
+00:05:07 [INFO] [GP] Trendyol Go ★4: 200 reviews
+00:05:10 [INFO] [GP] Trendyol Go ★5: 200 reviews
+00:05:15 [INFO] [GP] Getir ★1: 200 reviews
+00:05:18 [INFO] [GP] Getir ★2: 200 reviews
+00:05:21 [INFO] [GP] Getir ★3: 200 reviews
+00:05:24 [INFO] [GP] Getir ★4: 200 reviews
+00:05:26 [INFO] [GP] Getir ★5: 200 reviews
+00:05:32 [INFO] [GP] İsteGelsin ★1: 0 reviews
+00:05:34 [INFO] [GP] İsteGelsin ★2: 0 reviews
+00:05:37 [INFO] [GP] İsteGelsin ★3: 0 reviews
+00:05:40 [INFO] [GP] İsteGelsin ★4: 1 reviews
+00:05:43 [INFO] [GP] İsteGelsin ★5: 14 reviews
+00:05:49 [INFO] [GP] Domino's Pizza Türkiye ★1: 200 reviews
+00:05:52 [INFO] [GP] Domino's Pizza Türkiye ★2: 200 reviews
+00:05:54 [INFO] [GP] Domino's Pizza Türkiye ★3: 200 reviews
+00:05:57 [INFO] [GP] Domino's Pizza Türkiye ★4: 200 reviews
+00:05:59 [INFO] [GP] Domino's Pizza Türkiye ★5: 200 reviews
+00:06:05 [INFO] [GP] KFC Türkiye ★1: 0 reviews
+00:06:07 [INFO] [GP] KFC Türkiye ★2: 0 reviews
+00:06:10 [INFO] [GP] KFC Türkiye ★3: 0 reviews
+00:06:12 [INFO] [GP] KFC Türkiye ★4: 0 reviews
+00:06:15 [INFO] [GP] KFC Türkiye ★5: 1 reviews
+00:06:21 [INFO] [GP] BİM Online ★1: 200 reviews
+00:06:24 [INFO] [GP] BİM Online ★2: 154 reviews
+00:06:28 [INFO] [GP] BİM Online ★3: 84 reviews
+00:06:31 [INFO] [GP] BİM Online ★4: 70 reviews
+00:06:34 [INFO] [GP] BİM Online ★5: 200 reviews
+00:06:40 [INFO] [GP] CEPTE BİM ★1: 93 reviews
+00:06:43 [INFO] [GP] CEPTE BİM ★2: 7 reviews
+00:06:47 [INFO] [GP] CEPTE BİM ★3: 2 reviews
+00:06:50 [INFO] [GP] CEPTE BİM ★4: 4 reviews
+00:06:52 [INFO] [GP] CEPTE BİM ★5: 200 reviews
+00:06:58 [INFO] [GP] Cepte ŞOK ★1: 200 reviews
+00:07:01 [INFO] [GP] Cepte ŞOK ★2: 200 reviews
+00:07:04 [INFO] [GP] Cepte ŞOK ★3: 200 reviews
+00:07:07 [INFO] [GP] Cepte ŞOK ★4: 200 reviews
+00:07:09 [INFO] [GP] Cepte ŞOK ★5: 200 reviews
+00:07:15 [INFO] [GP] Migros ★1: 200 reviews
+00:07:18 [INFO] [GP] Migros ★2: 200 reviews
+00:07:21 [INFO] [GP] Migros ★3: 200 reviews
+00:07:23 [INFO] [GP] Migros ★4: 200 reviews
+00:07:26 [INFO] [GP] Migros ★5: 200 reviews
+00:07:32 [INFO] [GP] A101 ★1: 200 reviews
+00:07:35 [INFO] [GP] A101 ★2: 200 reviews
+00:07:37 [INFO] [GP] A101 ★3: 200 reviews
+00:07:40 [INFO] [GP] A101 ★4: 200 reviews
+00:07:42 [INFO] [GP] A101 ★5: 200 reviews
+00:07:48 [INFO] [GP] CarrefourSA ★1: 200 reviews
+00:07:51 [INFO] [GP] CarrefourSA ★2: 200 reviews
+00:07:53 [INFO] [GP] CarrefourSA ★3: 200 reviews
+00:07:56 [INFO] [GP] CarrefourSA ★4: 200 reviews
+00:07:58 [INFO] [GP] CarrefourSA ★5: 200 reviews
+00:08:05 [INFO] [GP] Tarım Kredi Birlik ★1: 77 reviews
+00:08:08 [INFO] [GP] Tarım Kredi Birlik ★2: 12 reviews
+00:08:12 [INFO] [GP] Tarım Kredi Birlik ★3: 24 reviews
+00:08:15 [INFO] [GP] Tarım Kredi Birlik ★4: 26 reviews
+00:08:18 [INFO] [GP] Tarım Kredi Birlik ★5: 113 reviews
+00:08:24 [INFO] [GP] Watsons Türkiye ★1: 200 reviews
+00:08:27 [INFO] [GP] Watsons Türkiye ★2: 200 reviews
+00:08:30 [INFO] [GP] Watsons Türkiye ★3: 200 reviews
+00:08:32 [INFO] [GP] Watsons Türkiye ★4: 200 reviews
+00:08:35 [INFO] [GP] Watsons Türkiye ★5: 200 reviews
+00:08:41 [INFO] [GP] Kariyer.net ★1: 200 reviews
+00:08:44 [INFO] [GP] Kariyer.net ★2: 200 reviews
+00:08:46 [INFO] [GP] Kariyer.net ★3: 200 reviews
+00:08:49 [INFO] [GP] Kariyer.net ★4: 200 reviews
+00:08:51 [INFO] [GP] Kariyer.net ★5: 200 reviews
+00:08:57 [INFO] [GP] İşin Olsun ★1: 200 reviews
+00:09:00 [INFO] [GP] İşin Olsun ★2: 200 reviews
+00:09:03 [INFO] [GP] İşin Olsun ★3: 200 reviews
+00:09:05 [INFO] [GP] İşin Olsun ★4: 200 reviews
+00:09:08 [INFO] [GP] İşin Olsun ★5: 200 reviews
+00:09:14 [INFO] [GP] İŞKUR ★1: 200 reviews
+00:09:17 [INFO] [GP] İŞKUR ★2: 79 reviews
+00:09:20 [INFO] [GP] İŞKUR ★3: 52 reviews
+00:09:24 [INFO] [GP] İŞKUR ★4: 29 reviews
+00:09:26 [INFO] [GP] İŞKUR ★5: 200 reviews
+00:09:32 [INFO] [GP] Eleman.net ★1: 200 reviews
+00:09:36 [INFO] [GP] Eleman.net ★2: 120 reviews
+00:09:39 [INFO] [GP] Eleman.net ★3: 129 reviews
+00:09:43 [INFO] [GP] Eleman.net ★4: 151 reviews
+00:09:45 [INFO] [GP] Eleman.net ★5: 200 reviews
+00:09:51 [INFO] [GP] Yenibiriş ★1: 200 reviews
+00:09:54 [INFO] [GP] Yenibiriş ★2: 200 reviews
+00:09:56 [INFO] [GP] Yenibiriş ★3: 200 reviews
+00:10:00 [INFO] [GP] Yenibiriş ★4: 194 reviews
+00:10:02 [INFO] [GP] Yenibiriş ★5: 200 reviews
+00:10:08 [INFO] [GP] Albaraka Mobil ★1: 200 reviews
+00:10:11 [INFO] [GP] Albaraka Mobil ★2: 200 reviews
+00:10:13 [INFO] [GP] Albaraka Mobil ★3: 200 reviews
+00:10:17 [INFO] [GP] Albaraka Mobil ★4: 178 reviews
+00:10:19 [INFO] [GP] Albaraka Mobil ★5: 200 reviews
+00:10:25 [INFO] [GP] Akbank ★1: 200 reviews
+00:10:28 [INFO] [GP] Akbank ★2: 200 reviews
+00:10:31 [INFO] [GP] Akbank ★3: 200 reviews
+00:10:34 [INFO] [GP] Akbank ★4: 200 reviews
+00:10:36 [INFO] [GP] Akbank ★5: 200 reviews
+00:10:42 [INFO] [GP] İşCep ★1: 200 reviews
+00:10:45 [INFO] [GP] İşCep ★2: 200 reviews
+00:10:47 [INFO] [GP] İşCep ★3: 200 reviews
+00:10:50 [INFO] [GP] İşCep ★4: 200 reviews
+00:10:53 [INFO] [GP] İşCep ★5: 200 reviews
+00:10:59 [INFO] [GP] Enpara.com ★1: 200 reviews
+00:11:02 [INFO] [GP] Enpara.com ★2: 133 reviews
+00:11:05 [INFO] [GP] Enpara.com ★3: 183 reviews
+00:11:08 [INFO] [GP] Enpara.com ★4: 200 reviews
+00:11:10 [INFO] [GP] Enpara.com ★5: 200 reviews
+00:11:16 [INFO] [GP] Halkbank Mobil ★1: 200 reviews
+00:11:19 [INFO] [GP] Halkbank Mobil ★2: 200 reviews
+00:11:22 [INFO] [GP] Halkbank Mobil ★3: 200 reviews
+00:11:25 [INFO] [GP] Halkbank Mobil ★4: 200 reviews
+00:11:27 [INFO] [GP] Halkbank Mobil ★5: 200 reviews
+Yeniden çekilecek: 31 uygulama
+[1/31] Hepsiburada
+[2/31] Trendyol
+[3/31] n11
+[4/31] Çiçeksepeti
+[5/31] Sahibinden
+[6/31] Pazarama
+[7/31] Boyner
+[8/31] Yemeksepeti
+[9/31] Trendyol Go
+[10/31] Getir
+[11/31] İsteGelsin
+[12/31] Domino's Pizza Türkiye
+[13/31] KFC Türkiye
+[14/31] BİM Online
+[15/31] CEPTE BİM
+[16/31] Cepte ŞOK
+[17/31] Migros
+[18/31] A101
+[19/31] CarrefourSA
+[20/31] Tarım Kredi Birlik
+[21/31] Watsons Türkiye
+[22/31] Kariyer.net
+[23/31] İşin Olsun
+[24/31] İŞKUR
+[25/31] Eleman.net
+[26/31] Yenibiriş
+[27/31] Albaraka Mobil
+[28/31] Akbank
+[29/31] İşCep
+[30/31] Enpara.com
+[31/31] Halkbank Mobil
+TAMAMLANDI
+Toplam: 49,904 satır, 55 uygulama
+rating
+1    10370
+2     9737
+3     9696
+4     9652
+5    10449
+Name: count, dtype: int64
+16:59:08 [INFO] ── [1/55] YouTube ──────────────────────────
+16:59:16 [INFO] [AS] YouTube ★1: 168 reviews (pool: 168)
+16:59:16 [INFO] [AS] YouTube ★2: 34 reviews (pool: 34)
+16:59:16 [INFO] [AS] YouTube ★3: 35 reviews (pool: 35)
+16:59:16 [INFO] [AS] YouTube ★4: 36 reviews (pool: 36)
+16:59:16 [INFO] [AS] YouTube ★5: 200 reviews (pool: 227)
+16:59:16 [INFO] Saved 473 rows → data/raw/app_store_reviews.csv
+16:59:20 [INFO] ── [2/55] Instagram ──────────────────────────
+16:59:29 [INFO] [AS] Instagram ★1: 200 reviews (pool: 295)
+16:59:29 [INFO] [AS] Instagram ★2: 19 reviews (pool: 19)
+16:59:29 [INFO] [AS] Instagram ★3: 25 reviews (pool: 25)
+16:59:29 [INFO] [AS] Instagram ★4: 14 reviews (pool: 14)
+16:59:29 [INFO] [AS] Instagram ★5: 147 reviews (pool: 147)
+16:59:29 [INFO] Saved 878 rows → data/raw/app_store_reviews.csv
+16:59:33 [INFO] ── [3/55] X ──────────────────────────
+16:59:42 [INFO] [AS] X ★1: 200 reviews (pool: 240)
+16:59:42 [INFO] [AS] X ★2: 25 reviews (pool: 25)
+16:59:42 [INFO] [AS] X ★3: 25 reviews (pool: 25)
+16:59:42 [INFO] [AS] X ★4: 18 reviews (pool: 18)
+16:59:42 [INFO] [AS] X ★5: 192 reviews (pool: 192)
+16:59:42 [INFO] Saved 1338 rows → data/raw/app_store_reviews.csv
+16:59:46 [INFO] ── [4/55] TikTok ──────────────────────────
+16:59:46 [WARNING] [AS] TikTok: 0 reviews fetched
+16:59:50 [INFO] ── [5/55] Facebook ──────────────────────────
+16:59:59 [INFO] [AS] Facebook ★1: 150 reviews (pool: 150)
+16:59:59 [INFO] [AS] Facebook ★2: 18 reviews (pool: 18)
+16:59:59 [INFO] [AS] Facebook ★3: 18 reviews (pool: 18)
+16:59:59 [INFO] [AS] Facebook ★4: 22 reviews (pool: 22)
+16:59:59 [INFO] [AS] Facebook ★5: 200 reviews (pool: 292)
+16:59:59 [INFO] Saved 1746 rows → data/raw/app_store_reviews.csv
+17:00:03 [INFO] ── [6/55] Snapchat ──────────────────────────
+17:00:11 [INFO] [AS] Snapchat ★1: 151 reviews (pool: 151)
+17:00:12 [INFO] [AS] Snapchat ★2: 28 reviews (pool: 28)
+17:00:12 [INFO] [AS] Snapchat ★3: 33 reviews (pool: 33)
+17:00:12 [INFO] [AS] Snapchat ★4: 43 reviews (pool: 43)
+17:00:12 [INFO] [AS] Snapchat ★5: 200 reviews (pool: 245)
+17:00:12 [INFO] Saved 2201 rows → data/raw/app_store_reviews.csv
+17:00:16 [INFO] ── [7/55] Pinterest ──────────────────────────
+17:00:24 [INFO] [AS] Pinterest ★1: 124 reviews (pool: 124)
+17:00:24 [INFO] [AS] Pinterest ★2: 40 reviews (pool: 40)
+17:00:24 [INFO] [AS] Pinterest ★3: 43 reviews (pool: 43)
+17:00:24 [INFO] [AS] Pinterest ★4: 74 reviews (pool: 74)
+17:00:24 [INFO] [AS] Pinterest ★5: 200 reviews (pool: 219)
+17:00:24 [INFO] Saved 2682 rows → data/raw/app_store_reviews.csv
+17:00:28 [INFO] ── [8/55] Telegram ──────────────────────────
+17:00:36 [INFO] [AS] Telegram ★1: 200 reviews (pool: 292)
+17:00:36 [INFO] [AS] Telegram ★2: 41 reviews (pool: 41)
+17:00:36 [INFO] [AS] Telegram ★3: 31 reviews (pool: 31)
+17:00:36 [INFO] [AS] Telegram ★4: 27 reviews (pool: 27)
+17:00:36 [INFO] [AS] Telegram ★5: 109 reviews (pool: 109)
+17:00:36 [INFO] Saved 3090 rows → data/raw/app_store_reviews.csv
+17:00:40 [INFO] ── [9/55] WhatsApp Messenger ──────────────────────────
+17:00:49 [INFO] [AS] WhatsApp Messenger ★1: 200 reviews (pool: 316)
+17:00:49 [INFO] [AS] WhatsApp Messenger ★2: 37 reviews (pool: 37)
+17:00:49 [INFO] [AS] WhatsApp Messenger ★3: 37 reviews (pool: 37)
+17:00:49 [INFO] [AS] WhatsApp Messenger ★4: 16 reviews (pool: 16)
+17:00:49 [INFO] [AS] WhatsApp Messenger ★5: 94 reviews (pool: 94)
+17:00:49 [INFO] Saved 3474 rows → data/raw/app_store_reviews.csv
+17:00:53 [INFO] ── [10/55] Threads ──────────────────────────
+17:00:53 [WARNING] [AS] Threads: 0 reviews fetched
+17:00:57 [INFO] ── [11/55] Hepsiburada ──────────────────────────
+17:01:05 [INFO] [AS] Hepsiburada ★1: 128 reviews (pool: 128)
+17:01:05 [INFO] [AS] Hepsiburada ★2: 12 reviews (pool: 12)
+17:01:05 [INFO] [AS] Hepsiburada ★3: 22 reviews (pool: 22)
+17:01:05 [INFO] [AS] Hepsiburada ★4: 26 reviews (pool: 26)
+17:01:05 [INFO] [AS] Hepsiburada ★5: 200 reviews (pool: 312)
+17:01:05 [INFO] Saved 3862 rows → data/raw/app_store_reviews.csv
+17:01:09 [INFO] ── [12/55] Trendyol ──────────────────────────
+17:01:17 [INFO] [AS] Trendyol ★1: 150 reviews (pool: 150)
+17:01:17 [INFO] [AS] Trendyol ★2: 12 reviews (pool: 12)
+17:01:17 [INFO] [AS] Trendyol ★3: 17 reviews (pool: 17)
+17:01:17 [INFO] [AS] Trendyol ★4: 37 reviews (pool: 37)
+17:01:17 [INFO] [AS] Trendyol ★5: 200 reviews (pool: 284)
+17:01:17 [INFO] Saved 4278 rows → data/raw/app_store_reviews.csv
+17:01:21 [INFO] ── [13/55] n11 ──────────────────────────
+17:01:29 [INFO] [AS] n11 ★1: 143 reviews (pool: 143)
+17:01:29 [INFO] [AS] n11 ★2: 18 reviews (pool: 18)
+17:01:29 [INFO] [AS] n11 ★3: 20 reviews (pool: 20)
+17:01:29 [INFO] [AS] n11 ★4: 23 reviews (pool: 23)
+17:01:29 [INFO] [AS] n11 ★5: 200 reviews (pool: 296)
+17:01:29 [INFO] Saved 4682 rows → data/raw/app_store_reviews.csv
+17:01:33 [INFO] ── [14/55] Amazon Alışveriş ──────────────────────────
+17:01:41 [INFO] [AS] Amazon Alışveriş ★1: 200 reviews (pool: 343)
+17:01:41 [INFO] [AS] Amazon Alışveriş ★2: 30 reviews (pool: 30)
+17:01:41 [INFO] [AS] Amazon Alışveriş ★3: 31 reviews (pool: 31)
+17:01:41 [INFO] [AS] Amazon Alışveriş ★4: 21 reviews (pool: 21)
+17:01:41 [INFO] [AS] Amazon Alışveriş ★5: 75 reviews (pool: 75)
+17:01:41 [INFO] Saved 5039 rows → data/raw/app_store_reviews.csv
+17:01:45 [INFO] ── [15/55] Çiçeksepeti ──────────────────────────
+17:01:53 [INFO] [AS] Çiçeksepeti ★1: 200 reviews (pool: 330)
+17:01:53 [INFO] [AS] Çiçeksepeti ★2: 13 reviews (pool: 13)
+17:01:53 [INFO] [AS] Çiçeksepeti ★3: 7 reviews (pool: 7)
+17:01:53 [INFO] [AS] Çiçeksepeti ★4: 11 reviews (pool: 11)
+17:01:53 [INFO] [AS] Çiçeksepeti ★5: 139 reviews (pool: 139)
+17:01:53 [INFO] Saved 5409 rows → data/raw/app_store_reviews.csv
+17:01:57 [INFO] ── [16/55] Dolap ──────────────────────────
+17:02:04 [INFO] [AS] Dolap ★1: 200 reviews (pool: 355)
+17:02:04 [INFO] [AS] Dolap ★2: 38 reviews (pool: 38)
+17:02:04 [INFO] [AS] Dolap ★3: 31 reviews (pool: 31)
+17:02:04 [INFO] [AS] Dolap ★4: 19 reviews (pool: 19)
+17:02:04 [INFO] [AS] Dolap ★5: 57 reviews (pool: 57)
+17:02:05 [INFO] Saved 5754 rows → data/raw/app_store_reviews.csv
+17:02:09 [INFO] ── [17/55] Sahibinden ──────────────────────────
+17:02:17 [INFO] [AS] Sahibinden ★1: 194 reviews (pool: 194)
+17:02:17 [INFO] [AS] Sahibinden ★2: 36 reviews (pool: 36)
+17:02:17 [INFO] [AS] Sahibinden ★3: 40 reviews (pool: 40)
+17:02:17 [INFO] [AS] Sahibinden ★4: 27 reviews (pool: 27)
+17:02:17 [INFO] [AS] Sahibinden ★5: 200 reviews (pool: 203)
+17:02:17 [INFO] Saved 6251 rows → data/raw/app_store_reviews.csv
+17:02:21 [INFO] ── [18/55] Pazarama ──────────────────────────
+17:02:28 [INFO] [AS] Pazarama ★1: 200 reviews (pool: 299)
+17:02:28 [INFO] [AS] Pazarama ★2: 25 reviews (pool: 25)
+17:02:28 [INFO] [AS] Pazarama ★3: 32 reviews (pool: 32)
+17:02:28 [INFO] [AS] Pazarama ★4: 19 reviews (pool: 19)
+17:02:28 [INFO] [AS] Pazarama ★5: 125 reviews (pool: 125)
+17:02:28 [INFO] Saved 6652 rows → data/raw/app_store_reviews.csv
+17:02:32 [INFO] ── [19/55] Boyner ──────────────────────────
+17:02:40 [INFO] [AS] Boyner ★1: 112 reviews (pool: 112)
+17:02:40 [INFO] [AS] Boyner ★2: 34 reviews (pool: 34)
+17:02:40 [INFO] [AS] Boyner ★3: 24 reviews (pool: 24)
+17:02:40 [INFO] [AS] Boyner ★4: 35 reviews (pool: 35)
+17:02:40 [INFO] [AS] Boyner ★5: 200 reviews (pool: 295)
+17:02:40 [INFO] Saved 7057 rows → data/raw/app_store_reviews.csv
+17:02:44 [INFO] ── [20/55] DeFacto ──────────────────────────
+17:02:52 [INFO] [AS] DeFacto ★1: 200 reviews (pool: 218)
+17:02:52 [INFO] [AS] DeFacto ★2: 43 reviews (pool: 43)
+17:02:52 [INFO] [AS] DeFacto ★3: 41 reviews (pool: 41)
+17:02:52 [INFO] [AS] DeFacto ★4: 30 reviews (pool: 30)
+17:02:52 [INFO] [AS] DeFacto ★5: 168 reviews (pool: 168)
+17:02:53 [INFO] Saved 7539 rows → data/raw/app_store_reviews.csv
+17:02:57 [INFO] ── [21/55] Yemeksepeti ──────────────────────────
+17:03:05 [INFO] [AS] Yemeksepeti ★1: 200 reviews (pool: 336)
+17:03:05 [INFO] [AS] Yemeksepeti ★2: 11 reviews (pool: 11)
+17:03:05 [INFO] [AS] Yemeksepeti ★3: 18 reviews (pool: 18)
+17:03:05 [INFO] [AS] Yemeksepeti ★4: 15 reviews (pool: 15)
+17:03:05 [INFO] [AS] Yemeksepeti ★5: 120 reviews (pool: 120)
+17:03:05 [INFO] Saved 7903 rows → data/raw/app_store_reviews.csv
+17:03:09 [INFO] ── [22/55] Trendyol Go ──────────────────────────
+17:03:16 [INFO] [AS] Trendyol Go ★1: 200 reviews (pool: 379)
+17:03:16 [INFO] [AS] Trendyol Go ★2: 17 reviews (pool: 17)
+17:03:16 [INFO] [AS] Trendyol Go ★3: 17 reviews (pool: 17)
+17:03:16 [INFO] [AS] Trendyol Go ★4: 10 reviews (pool: 10)
+17:03:16 [INFO] [AS] Trendyol Go ★5: 77 reviews (pool: 77)
+17:03:16 [INFO] Saved 8224 rows → data/raw/app_store_reviews.csv
+17:03:20 [INFO] ── [23/55] Getir ──────────────────────────
+17:03:28 [INFO] [AS] Getir ★1: 200 reviews (pool: 328)
+17:03:28 [INFO] [AS] Getir ★2: 10 reviews (pool: 10)
+17:03:28 [INFO] [AS] Getir ★3: 14 reviews (pool: 14)
+17:03:28 [INFO] [AS] Getir ★4: 11 reviews (pool: 11)
+17:03:28 [INFO] [AS] Getir ★5: 137 reviews (pool: 137)
+17:03:28 [INFO] Saved 8596 rows → data/raw/app_store_reviews.csv
+17:03:32 [INFO] ── [24/55] Tıkla Gelsin ──────────────────────────
+17:03:40 [INFO] [AS] Tıkla Gelsin ★1: 200 reviews (pool: 401)
+17:03:40 [INFO] [AS] Tıkla Gelsin ★2: 16 reviews (pool: 16)
+17:03:40 [INFO] [AS] Tıkla Gelsin ★3: 13 reviews (pool: 13)
+17:03:40 [INFO] [AS] Tıkla Gelsin ★4: 7 reviews (pool: 7)
+17:03:40 [INFO] [AS] Tıkla Gelsin ★5: 63 reviews (pool: 63)
+17:03:40 [INFO] Saved 8895 rows → data/raw/app_store_reviews.csv
+17:03:44 [INFO] ── [25/55] İsteGelsin ──────────────────────────
+17:03:45 [INFO] [AS] İsteGelsin ★1: 0 reviews (pool: 0)
+17:03:45 [INFO] [AS] İsteGelsin ★2: 0 reviews (pool: 0)
+17:03:45 [INFO] [AS] İsteGelsin ★3: 0 reviews (pool: 0)
+17:03:45 [INFO] [AS] İsteGelsin ★4: 0 reviews (pool: 0)
+17:03:45 [INFO] [AS] İsteGelsin ★5: 3 reviews (pool: 3)
+17:03:45 [INFO] Saved 8898 rows → data/raw/app_store_reviews.csv
+17:03:49 [INFO] ── [26/55] Domino's Pizza Türkiye ──────────────────────────
+17:03:57 [INFO] [AS] Domino's Pizza Türkiye ★1: 156 reviews (pool: 156)
+17:03:57 [INFO] [AS] Domino's Pizza Türkiye ★2: 15 reviews (pool: 15)
+17:03:57 [INFO] [AS] Domino's Pizza Türkiye ★3: 20 reviews (pool: 20)
+17:03:57 [INFO] [AS] Domino's Pizza Türkiye ★4: 19 reviews (pool: 19)
+17:03:57 [INFO] [AS] Domino's Pizza Türkiye ★5: 200 reviews (pool: 290)
+17:03:57 [INFO] Saved 9308 rows → data/raw/app_store_reviews.csv
+17:04:01 [INFO] ── [27/55] McDonald's ──────────────────────────
+17:04:09 [INFO] [AS] McDonald's ★1: 200 reviews (pool: 435)
+17:04:09 [INFO] [AS] McDonald's ★2: 19 reviews (pool: 19)
+17:04:09 [INFO] [AS] McDonald's ★3: 12 reviews (pool: 12)
+17:04:09 [INFO] [AS] McDonald's ★4: 4 reviews (pool: 4)
+17:04:09 [INFO] [AS] McDonald's ★5: 30 reviews (pool: 30)
+17:04:09 [INFO] Saved 9573 rows → data/raw/app_store_reviews.csv
+17:04:13 [INFO] ── [28/55] KFC Türkiye ──────────────────────────
+17:04:13 [WARNING] [AS] KFC Türkiye: 0 reviews fetched
+17:04:17 [INFO] ── [29/55] BİM Online ──────────────────────────
+17:04:25 [INFO] [AS] BİM Online ★1: 200 reviews (pool: 214)
+17:04:25 [INFO] [AS] BİM Online ★2: 23 reviews (pool: 23)
+17:04:25 [INFO] [AS] BİM Online ★3: 20 reviews (pool: 20)
+17:04:25 [INFO] [AS] BİM Online ★4: 17 reviews (pool: 17)
+17:04:25 [INFO] [AS] BİM Online ★5: 200 reviews (pool: 226)
+17:04:25 [INFO] Saved 10033 rows → data/raw/app_store_reviews.csv
+17:04:29 [INFO] ── [30/55] CEPTE BİM ──────────────────────────
+17:04:35 [INFO] [AS] CEPTE BİM ★1: 200 reviews (pool: 214)
+17:04:35 [INFO] [AS] CEPTE BİM ★2: 23 reviews (pool: 23)
+17:04:35 [INFO] [AS] CEPTE BİM ★3: 20 reviews (pool: 20)
+17:04:35 [INFO] [AS] CEPTE BİM ★4: 17 reviews (pool: 17)
+17:04:35 [INFO] [AS] CEPTE BİM ★5: 200 reviews (pool: 226)
+17:04:35 [INFO] Saved 10033 rows → data/raw/app_store_reviews.csv
+17:04:39 [INFO] ── [31/55] Cepte ŞOK ──────────────────────────
+17:04:47 [INFO] [AS] Cepte ŞOK ★1: 200 reviews (pool: 439)
+17:04:47 [INFO] [AS] Cepte ŞOK ★2: 13 reviews (pool: 13)
+17:04:47 [INFO] [AS] Cepte ŞOK ★3: 13 reviews (pool: 13)
+17:04:47 [INFO] [AS] Cepte ŞOK ★4: 4 reviews (pool: 4)
+17:04:47 [INFO] [AS] Cepte ŞOK ★5: 31 reviews (pool: 31)
+17:04:47 [INFO] Saved 10294 rows → data/raw/app_store_reviews.csv
+17:04:51 [INFO] ── [32/55] Migros ──────────────────────────
+17:04:59 [INFO] [AS] Migros ★1: 200 reviews (pool: 285)
+17:04:59 [INFO] [AS] Migros ★2: 21 reviews (pool: 21)
+17:04:59 [INFO] [AS] Migros ★3: 23 reviews (pool: 23)
+17:04:59 [INFO] [AS] Migros ★4: 20 reviews (pool: 20)
+17:04:59 [INFO] [AS] Migros ★5: 151 reviews (pool: 151)
+17:04:59 [INFO] Saved 10709 rows → data/raw/app_store_reviews.csv
+17:05:03 [INFO] ── [33/55] A101 ──────────────────────────
+17:05:11 [INFO] [AS] A101 ★1: 200 reviews (pool: 272)
+17:05:11 [INFO] [AS] A101 ★2: 27 reviews (pool: 27)
+17:05:11 [INFO] [AS] A101 ★3: 14 reviews (pool: 14)
+17:05:11 [INFO] [AS] A101 ★4: 18 reviews (pool: 18)
+17:05:11 [INFO] [AS] A101 ★5: 169 reviews (pool: 169)
+17:05:11 [INFO] Saved 11137 rows → data/raw/app_store_reviews.csv
+17:05:15 [INFO] ── [34/55] CarrefourSA ──────────────────────────
+17:05:22 [INFO] [AS] CarrefourSA ★1: 200 reviews (pool: 277)
+17:05:22 [INFO] [AS] CarrefourSA ★2: 51 reviews (pool: 51)
+17:05:22 [INFO] [AS] CarrefourSA ★3: 46 reviews (pool: 46)
+17:05:22 [INFO] [AS] CarrefourSA ★4: 22 reviews (pool: 22)
+17:05:22 [INFO] [AS] CarrefourSA ★5: 104 reviews (pool: 104)
+17:05:23 [INFO] Saved 11560 rows → data/raw/app_store_reviews.csv
+17:05:27 [INFO] ── [35/55] Tarım Kredi Birlik ──────────────────────────
+17:05:28 [INFO] [AS] Tarım Kredi Birlik ★1: 22 reviews (pool: 22)
+17:05:28 [INFO] [AS] Tarım Kredi Birlik ★2: 0 reviews (pool: 0)
+17:05:28 [INFO] [AS] Tarım Kredi Birlik ★3: 2 reviews (pool: 2)
+17:05:28 [INFO] [AS] Tarım Kredi Birlik ★4: 1 reviews (pool: 1)
+17:05:28 [INFO] [AS] Tarım Kredi Birlik ★5: 1 reviews (pool: 1)
+17:05:28 [INFO] Saved 11586 rows → data/raw/app_store_reviews.csv
+17:05:32 [INFO] ── [36/55] Watsons Türkiye ──────────────────────────
+17:05:39 [INFO] [AS] Watsons Türkiye ★1: 200 reviews (pool: 274)
+17:05:39 [INFO] [AS] Watsons Türkiye ★2: 33 reviews (pool: 33)
+17:05:39 [INFO] [AS] Watsons Türkiye ★3: 26 reviews (pool: 26)
+17:05:39 [INFO] [AS] Watsons Türkiye ★4: 19 reviews (pool: 19)
+17:05:39 [INFO] [AS] Watsons Türkiye ★5: 148 reviews (pool: 148)
+17:05:39 [INFO] Saved 12012 rows → data/raw/app_store_reviews.csv
+17:05:43 [INFO] ── [37/55] Gratis ──────────────────────────
+17:05:51 [INFO] [AS] Gratis ★1: 200 reviews (pool: 389)
+17:05:51 [INFO] [AS] Gratis ★2: 27 reviews (pool: 27)
+17:05:51 [INFO] [AS] Gratis ★3: 26 reviews (pool: 26)
+17:05:51 [INFO] [AS] Gratis ★4: 15 reviews (pool: 15)
+17:05:51 [INFO] [AS] Gratis ★5: 43 reviews (pool: 43)
+17:05:51 [INFO] Saved 12323 rows → data/raw/app_store_reviews.csv
+17:05:55 [INFO] ── [38/55] LinkedIn ──────────────────────────
+17:06:03 [INFO] [AS] LinkedIn ★1: 200 reviews (pool: 251)
+17:06:03 [INFO] [AS] LinkedIn ★2: 34 reviews (pool: 34)
+17:06:03 [INFO] [AS] LinkedIn ★3: 37 reviews (pool: 37)
+17:06:03 [INFO] [AS] LinkedIn ★4: 26 reviews (pool: 26)
+17:06:03 [INFO] [AS] LinkedIn ★5: 152 reviews (pool: 152)
+17:06:03 [INFO] Saved 12772 rows → data/raw/app_store_reviews.csv
+17:06:07 [INFO] ── [39/55] Kariyer.net ──────────────────────────
+17:06:15 [INFO] [AS] Kariyer.net ★1: 200 reviews (pool: 285)
+17:06:15 [INFO] [AS] Kariyer.net ★2: 38 reviews (pool: 38)
+17:06:15 [INFO] [AS] Kariyer.net ★3: 43 reviews (pool: 43)
+17:06:15 [INFO] [AS] Kariyer.net ★4: 21 reviews (pool: 21)
+17:06:15 [INFO] [AS] Kariyer.net ★5: 113 reviews (pool: 113)
+17:06:15 [INFO] Saved 13187 rows → data/raw/app_store_reviews.csv
+17:06:19 [INFO] ── [40/55] İşin Olsun ──────────────────────────
+17:06:27 [INFO] [AS] İşin Olsun ★1: 200 reviews (pool: 202)
+17:06:27 [INFO] [AS] İşin Olsun ★2: 23 reviews (pool: 23)
+17:06:27 [INFO] [AS] İşin Olsun ★3: 21 reviews (pool: 21)
+17:06:27 [INFO] [AS] İşin Olsun ★4: 25 reviews (pool: 25)
+17:06:27 [INFO] [AS] İşin Olsun ★5: 200 reviews (pool: 229)
+17:06:27 [INFO] Saved 13656 rows → data/raw/app_store_reviews.csv
+17:06:31 [INFO] ── [41/55] İŞKUR ──────────────────────────
+17:06:38 [INFO] [AS] İŞKUR ★1: 200 reviews (pool: 315)
+17:06:38 [INFO] [AS] İŞKUR ★2: 11 reviews (pool: 11)
+17:06:38 [INFO] [AS] İŞKUR ★3: 5 reviews (pool: 5)
+17:06:38 [INFO] [AS] İŞKUR ★4: 1 reviews (pool: 1)
+17:06:38 [INFO] [AS] İŞKUR ★5: 20 reviews (pool: 20)
+17:06:38 [INFO] Saved 13893 rows → data/raw/app_store_reviews.csv
+17:06:42 [INFO] ── [42/55] Eleman.net ──────────────────────────
+17:06:49 [INFO] [AS] Eleman.net ★1: 200 reviews (pool: 284)
+17:06:49 [INFO] [AS] Eleman.net ★2: 17 reviews (pool: 17)
+17:06:49 [INFO] [AS] Eleman.net ★3: 18 reviews (pool: 18)
+17:06:49 [INFO] [AS] Eleman.net ★4: 13 reviews (pool: 13)
+17:06:49 [INFO] [AS] Eleman.net ★5: 80 reviews (pool: 80)
+17:06:49 [INFO] Saved 14221 rows → data/raw/app_store_reviews.csv
+17:06:53 [INFO] ── [43/55] Yenibiriş ──────────────────────────
+17:07:01 [INFO] [AS] Yenibiriş ★1: 200 reviews (pool: 369)
+17:07:01 [INFO] [AS] Yenibiriş ★2: 41 reviews (pool: 41)
+17:07:01 [INFO] [AS] Yenibiriş ★3: 22 reviews (pool: 22)
+17:07:01 [INFO] [AS] Yenibiriş ★4: 10 reviews (pool: 10)
+17:07:01 [INFO] [AS] Yenibiriş ★5: 58 reviews (pool: 58)
+17:07:01 [INFO] Saved 14552 rows → data/raw/app_store_reviews.csv
+17:07:05 [INFO] ── [44/55] Ziraat Mobil ──────────────────────────
+17:07:12 [INFO] [AS] Ziraat Mobil ★1: 200 reviews (pool: 222)
+17:07:12 [INFO] [AS] Ziraat Mobil ★2: 21 reviews (pool: 21)
+17:07:12 [INFO] [AS] Ziraat Mobil ★3: 32 reviews (pool: 32)
+17:07:12 [INFO] [AS] Ziraat Mobil ★4: 20 reviews (pool: 20)
+17:07:13 [INFO] [AS] Ziraat Mobil ★5: 200 reviews (pool: 205)
+17:07:13 [INFO] Saved 15025 rows → data/raw/app_store_reviews.csv
+17:07:17 [INFO] ── [45/55] Albaraka Mobil ──────────────────────────
+17:07:24 [INFO] [AS] Albaraka Mobil ★1: 200 reviews (pool: 292)
+17:07:24 [INFO] [AS] Albaraka Mobil ★2: 19 reviews (pool: 19)
+17:07:24 [INFO] [AS] Albaraka Mobil ★3: 45 reviews (pool: 45)
+17:07:24 [INFO] [AS] Albaraka Mobil ★4: 28 reviews (pool: 28)
+17:07:25 [INFO] [AS] Albaraka Mobil ★5: 116 reviews (pool: 116)
+17:07:25 [INFO] Saved 15433 rows → data/raw/app_store_reviews.csv
+17:07:29 [INFO] ── [46/55] Kuveyt Türk Mobil ──────────────────────────
+17:07:36 [INFO] [AS] Kuveyt Türk Mobil ★1: 69 reviews (pool: 69)
+17:07:36 [INFO] [AS] Kuveyt Türk Mobil ★2: 8 reviews (pool: 8)
+17:07:36 [INFO] [AS] Kuveyt Türk Mobil ★3: 12 reviews (pool: 12)
+17:07:36 [INFO] [AS] Kuveyt Türk Mobil ★4: 20 reviews (pool: 20)
+17:07:36 [INFO] [AS] Kuveyt Türk Mobil ★5: 200 reviews (pool: 391)
+17:07:37 [INFO] Saved 15742 rows → data/raw/app_store_reviews.csv
+17:07:41 [INFO] ── [47/55] Akbank ──────────────────────────
+17:07:48 [INFO] [AS] Akbank ★1: 152 reviews (pool: 152)
+17:07:48 [INFO] [AS] Akbank ★2: 15 reviews (pool: 15)
+17:07:48 [INFO] [AS] Akbank ★3: 22 reviews (pool: 22)
+17:07:48 [INFO] [AS] Akbank ★4: 22 reviews (pool: 22)
+17:07:48 [INFO] [AS] Akbank ★5: 200 reviews (pool: 289)
+17:07:48 [INFO] Saved 16153 rows → data/raw/app_store_reviews.csv
+17:07:52 [INFO] ── [48/55] İşCep ──────────────────────────
+17:08:00 [INFO] [AS] İşCep ★1: 151 reviews (pool: 151)
+17:08:00 [INFO] [AS] İşCep ★2: 26 reviews (pool: 26)
+17:08:00 [INFO] [AS] İşCep ★3: 17 reviews (pool: 17)
+17:08:00 [INFO] [AS] İşCep ★4: 25 reviews (pool: 25)
+17:08:00 [INFO] [AS] İşCep ★5: 200 reviews (pool: 281)
+17:08:00 [INFO] Saved 16572 rows → data/raw/app_store_reviews.csv
+17:08:04 [INFO] ── [49/55] Garanti BBVA Mobile ──────────────────────────
+17:08:12 [INFO] [AS] Garanti BBVA Mobile ★1: 173 reviews (pool: 173)
+17:08:12 [INFO] [AS] Garanti BBVA Mobile ★2: 14 reviews (pool: 14)
+17:08:12 [INFO] [AS] Garanti BBVA Mobile ★3: 22 reviews (pool: 22)
+17:08:12 [INFO] [AS] Garanti BBVA Mobile ★4: 11 reviews (pool: 11)
+17:08:12 [INFO] [AS] Garanti BBVA Mobile ★5: 200 reviews (pool: 280)
+17:08:12 [INFO] Saved 16992 rows → data/raw/app_store_reviews.csv
+17:08:16 [INFO] ── [50/55] Yapı Kredi Mobile ──────────────────────────
+17:08:24 [INFO] [AS] Yapı Kredi Mobile ★1: 120 reviews (pool: 120)
+17:08:24 [INFO] [AS] Yapı Kredi Mobile ★2: 20 reviews (pool: 20)
+17:08:24 [INFO] [AS] Yapı Kredi Mobile ★3: 23 reviews (pool: 23)
+17:08:24 [INFO] [AS] Yapı Kredi Mobile ★4: 42 reviews (pool: 42)
+17:08:24 [INFO] [AS] Yapı Kredi Mobile ★5: 200 reviews (pool: 295)
+17:08:24 [INFO] Saved 17397 rows → data/raw/app_store_reviews.csv
+17:08:28 [INFO] ── [51/55] QNB Finansbank ──────────────────────────
+17:08:36 [INFO] [AS] QNB Finansbank ★1: 178 reviews (pool: 178)
+17:08:36 [INFO] [AS] QNB Finansbank ★2: 15 reviews (pool: 15)
+17:08:36 [INFO] [AS] QNB Finansbank ★3: 14 reviews (pool: 14)
+17:08:36 [INFO] [AS] QNB Finansbank ★4: 16 reviews (pool: 16)
+17:08:36 [INFO] [AS] QNB Finansbank ★5: 200 reviews (pool: 277)
+17:08:36 [INFO] Saved 17820 rows → data/raw/app_store_reviews.csv
+17:08:40 [INFO] ── [52/55] Enpara.com ──────────────────────────
+17:08:48 [INFO] [AS] Enpara.com ★1: 63 reviews (pool: 63)
+17:08:48 [INFO] [AS] Enpara.com ★2: 22 reviews (pool: 22)
+17:08:48 [INFO] [AS] Enpara.com ★3: 20 reviews (pool: 20)
+17:08:48 [INFO] [AS] Enpara.com ★4: 24 reviews (pool: 24)
+17:08:48 [INFO] [AS] Enpara.com ★5: 200 reviews (pool: 371)
+17:08:48 [INFO] Saved 18149 rows → data/raw/app_store_reviews.csv
+17:08:52 [INFO] ── [53/55] VakıfBank Mobil ──────────────────────────
+17:09:00 [INFO] [AS] VakıfBank Mobil ★1: 200 reviews (pool: 297)
+17:09:00 [INFO] [AS] VakıfBank Mobil ★2: 12 reviews (pool: 12)
+17:09:00 [INFO] [AS] VakıfBank Mobil ★3: 18 reviews (pool: 18)
+17:09:00 [INFO] [AS] VakıfBank Mobil ★4: 9 reviews (pool: 9)
+17:09:00 [INFO] [AS] VakıfBank Mobil ★5: 164 reviews (pool: 164)
+17:09:00 [INFO] Saved 18552 rows → data/raw/app_store_reviews.csv
+17:09:04 [INFO] ── [54/55] Halkbank Mobil ──────────────────────────
+17:09:12 [INFO] [AS] Halkbank Mobil ★1: 200 reviews (pool: 348)
+17:09:12 [INFO] [AS] Halkbank Mobil ★2: 38 reviews (pool: 38)
+17:09:12 [INFO] [AS] Halkbank Mobil ★3: 26 reviews (pool: 26)
+17:09:12 [INFO] [AS] Halkbank Mobil ★4: 18 reviews (pool: 18)
+17:09:12 [INFO] [AS] Halkbank Mobil ★5: 70 reviews (pool: 70)
+17:09:12 [INFO] Saved 18904 rows → data/raw/app_store_reviews.csv
+17:09:16 [INFO] ── [55/55] DenizBank ──────────────────────────
+17:09:24 [INFO] [AS] DenizBank ★1: 200 reviews (pool: 278)
+17:09:24 [INFO] [AS] DenizBank ★2: 14 reviews (pool: 14)
+17:09:24 [INFO] [AS] DenizBank ★3: 14 reviews (pool: 14)
+17:09:24 [INFO] [AS] DenizBank ★4: 16 reviews (pool: 16)
+17:09:24 [INFO] [AS] DenizBank ★5: 178 reviews (pool: 178)
+17:09:24 [INFO] Saved 19326 rows → data/raw/app_store_reviews.csv
+17:09:24 [INFO] ============================================================
+17:09:24 [INFO] App Store total rows this run: 19786
+17:09:24 [INFO] App Store star distribution:
+rating
+1    9004
+2    1197
+3    1207
+4    1044
+5    7334
