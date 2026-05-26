@@ -57,9 +57,9 @@ Problem Tanımı → Veri Toplama → Keşifsel Analiz → Ön İşleme → Mode
 | Aşama | Durum |
 |-------|-------|
 | Problem tanımı ve planlama | Tamamlandı |
-| Veri toplama (Web Scraping) | Devam ediyor |
-| Veri anlama ve keşifsel analiz | Bekliyor |
-| Veri ön işleme | Bekliyor |
+| Veri toplama (Web Scraping) | Tamamlandı |
+| Veri anlama ve keşifsel analiz | Tamamlandı |
+| Veri ön işleme | Devam ediyor |
 | Modelleme | Bekliyor |
 | Değerlendirme | Bekliyor |
 | Görselleştirme | Bekliyor |

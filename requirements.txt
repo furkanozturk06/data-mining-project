@@ -8,3 +8,5 @@ undetected-chromedriver
 matplotlib
 scikit-learn
 nltk
+google-play-scraper
+app-store-scraper
