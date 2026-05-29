@@ -1,6 +1,7 @@
 requests
 beautifulsoup4
 pandas
+numpy
 lxml
 selenium
 webdriver-manager
@@ -17,3 +18,5 @@ lime
 streamlit
 google-play-scraper
 app-store-scraper
+xgboost
+tqdm
