@@ -88,12 +88,19 @@ if page == "🔍 Canlı Analiz":
                     pred_idx = np.argmax(probs)
                     confidence = probs[pred_idx] * 100
                     
-                    label = "positive" if pred_idx == 1 else "negative"
+                    if pred_idx == 0:
+                        label = "negative"
+                    elif pred_idx == 1:
+                        label = "neutral"
+                    else:
+                        label = "positive"
                     
                     col1, col2 = st.columns(2)
                     with col1:
                         if label == "positive":
                             st.success("🟢 Olumlu Yorum")
+                        elif label == "neutral":
+                            st.warning("🟡 Nötr Yorum")
                         else:
                             st.error("🔴 Olumsuz Yorum")
                     with col2:
