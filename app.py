@@ -146,8 +146,10 @@ elif page == "🏢 Uygulama Arama":
             
         with col_results:
             filtered_df = df[(df['uygulama'] == selected_app) & (df['puan'] >= min_score)]
-            if platform_filter != "Tümü":
-                filtered_df = filtered_df[filtered_df['platform'] == platform_filter]
+            if platform_filter == "Google Play":
+                filtered_df = filtered_df[filtered_df['platform'] == 'google_play']
+            elif platform_filter == "App Store":
+                filtered_df = filtered_df[filtered_df['platform'] == 'app_store']
                 
             if filtered_df.empty:
                 st.info("Bu filtrelere uygun veri bulunamadı.")
