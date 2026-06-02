@@ -25,7 +25,8 @@ results/
 
 # Büyük CSV ve data dosyaları
 data/raw/
-data/processed/*.csv
+data/processed/reviews_cleaned.csv
+data/processed/reviews_advanced_cleaned.csv
 
 # OS
 .DS_Store
