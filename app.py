@@ -85,15 +85,16 @@ if page == "🔍 Canlı Analiz":
                     logits = outputs.logits.cpu()
                     probs = F.softmax(logits, dim=1).squeeze().numpy()
                     
-                    pred_idx = np.argmax(probs)
+                    pred_idx = int(np.argmax(probs))
                     confidence = probs[pred_idx] * 100
                     
-                    if pred_idx == 0:
-                        label = "negative"
-                    elif pred_idx == 1:
-                        label = "neutral"
-                    else:
-                        label = "positive"
+                    # Dinamik olarak modelin içindeki id2label sözlüğünü oku
+                    id2label = model.config.id2label
+                    label = id2label.get(pred_idx) or id2label.get(str(pred_idx), "unknown")
+                    
+                    # Eğer model 2 sınıflıysa (eski model) Nötr tahmini hiç gelmez.
+                    label = label.lower()
+
                     
                     col1, col2 = st.columns(2)
                     with col1:
