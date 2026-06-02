@@ -24,7 +24,6 @@ results/
 .ipynb_checkpoints/
 
 # Büyük CSV ve data dosyaları
-data/raw/
 data/processed/reviews_cleaned.csv
 data/processed/reviews_advanced_cleaned.csv
 
