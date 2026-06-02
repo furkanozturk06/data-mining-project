@@ -107,13 +107,13 @@ if page == "🔍 Canlı Analiz":
                     # 3. For attention maps, use the internal BERT model
                     inputs = hybrid.tokenizer(user_input, return_tensors="pt", truncation=True, max_length=512).to(hybrid.device)
                     with torch.no_grad():
-                        outputs = hybrid.bert(**inputs)
+                        outputs = hybrid.bert(**inputs, output_attentions=True)
                     
                     attentions = outputs.attentions
                     last_layer_attention = attentions[-1].cpu()
                     cls_attention = last_layer_attention[0].mean(dim=0)[0].numpy()
                     
-                    tokens = tokenizer.convert_ids_to_tokens(inputs['input_ids'][0])
+                    tokens = hybrid.tokenizer.convert_ids_to_tokens(inputs['input_ids'][0])
                     valid_indices = [i for i, t in enumerate(tokens) if t not in ['[CLS]', '[SEP]', '[PAD]']]
                     clean_tokens = [tokens[i].replace('##', '') for i in valid_indices]
                     clean_attentions = [cls_attention[i] for i in valid_indices]
