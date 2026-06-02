@@ -15,14 +15,15 @@ class HybridEnsembleClassifier:
         print(f"Hybrid Model loading on: {self.device}")
         
         # 1. Load Classical Models
-        print("Loading SVC and TF-IDF...")
+        print("Loading SVC, TF-IDF, and Scaler...")
         self.svc = joblib.load(svc_model_path)
         self.tfidf = joblib.load(tfidf_path)
+        self.scaler = joblib.load("models/scaler.pkl")
         
         # 2. Load BERT Model
         print("Loading Fine-Tuned BERT...")
         self.tokenizer = AutoTokenizer.from_pretrained(bert_model_path)
-        self.bert = AutoModelForSequenceClassification.from_pretrained(bert_model_path)
+        self.bert = AutoModelForSequenceClassification.from_pretrained(bert_model_path, attn_implementation="eager")
         self.bert.to(self.device)
         self.bert.eval()
         
@@ -47,10 +48,18 @@ class HybridEnsembleClassifier:
         cleaned_text = self._clean_text(text)
         X_tfidf = self.tfidf.transform([cleaned_text])
         
-        # Pad with 5 zeros for numerical features (StandardScaled mean = 0)
+        # Calculate the 5 numerical features
+        review_length = len(str(text))
+        word_count = len(str(text).split())
+        exclamation_count = str(text).count('!')
+        question_count = str(text).count('?')
+        uppercase_ratio = sum(1 for c in str(text) if c.isupper()) / max(1, len(str(text)))
+        
+        num_features = np.array([[review_length, word_count, exclamation_count, question_count, uppercase_ratio]])
+        num_scaled = self.scaler.transform(num_features)
+        
         import scipy.sparse
-        zero_pad = scipy.sparse.csr_matrix(np.zeros((1, 5)))
-        X_combined = scipy.sparse.hstack([X_tfidf, zero_pad]).tocsr()
+        X_combined = scipy.sparse.hstack([X_tfidf, num_scaled]).tocsr()
         
         # Predict probability
         svc_probs = self.svc.predict_proba(X_combined)[0] 
