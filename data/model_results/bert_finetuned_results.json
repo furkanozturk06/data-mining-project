@@ -1,0 +1,74 @@
+{
+  "model_name": "BERT Fine-Tuned",
+  "base_model": "savasy/bert-base-turkish-sentiment-cased",
+  "model_path": "./my_bert_model",
+  "training_config": {
+    "epochs": 3,
+    "batch_size": 16,
+    "learning_rate": 2e-05,
+    "warmup_steps": 100,
+    "weight_decay": 0.01,
+    "seed": 42
+  },
+  "data_info": {
+    "total_samples": 61972,
+    "balanced_samples": 15000,
+    "training_samples": 12000,
+    "test_samples": 3000,
+    "classes": [
+      "negative",
+      "neutral",
+      "positive"
+    ]
+  },
+  "device": "cuda",
+  "gpu_name": null,
+  "metrics": {
+    "accuracy": 0.6427,
+    "precision": 0.6884,
+    "recall": 0.6427,
+    "f1_score": 0.647
+  },
+  "per_class_metrics": {
+    "negative": {
+      "precision": 0.7411,
+      "recall": 0.521,
+      "f1-score": 0.6119,
+      "support": 1000.0
+    },
+    "neutral": {
+      "precision": 0.5043,
+      "recall": 0.761,
+      "f1-score": 0.6066,
+      "support": 1000.0
+    },
+    "positive": {
+      "precision": 0.8198,
+      "recall": 0.646,
+      "f1-score": 0.7226,
+      "support": 1000.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      521,
+      439,
+      40
+    ],
+    [
+      137,
+      761,
+      102
+    ],
+    [
+      45,
+      309,
+      646
+    ]
+  ],
+  "comparison_with_zero_shot": {
+    "zero_shot_accuracy": 0.711,
+    "fine_tuned_accuracy": 0.6427,
+    "improvement": -6.83
+  }
+}
