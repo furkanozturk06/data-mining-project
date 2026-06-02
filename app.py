@@ -39,14 +39,12 @@ def load_model_comparison_data():
     except FileNotFoundError:
         return pd.DataFrame()
 
+from hybrid_model import HybridEnsembleClassifier
+
 @st.cache_resource
-def load_bert_model():
-    model_name = "models/advanced_bert_model"
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    model = AutoModelForSequenceClassification.from_pretrained(model_name, output_attentions=True)
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model.to(device)
-    return tokenizer, model, device
+def load_hybrid_model():
+    hybrid = HybridEnsembleClassifier()
+    return hybrid
 
 df = load_main_data()
 tfidf_data = load_tfidf_data()
@@ -76,25 +74,14 @@ if page == "🔍 Canlı Analiz":
         else:
             with st.spinner("Analiz ediliyor..."):
                 try:
-                    tokenizer, model, device = load_bert_model()
+                    hybrid = load_hybrid_model()
                     
-                    inputs = tokenizer(user_input, return_tensors="pt", truncation=True, max_length=512).to(device)
-                    with torch.no_grad():
-                        outputs = model(**inputs)
-                        
-                    logits = outputs.logits.cpu()
-                    probs = F.softmax(logits, dim=1).squeeze().numpy()
-                    
-                    pred_idx = int(np.argmax(probs))
-                    confidence = probs[pred_idx] * 100
-                    
-                    # Dinamik olarak modelin içindeki id2label sözlüğünü oku
-                    id2label = model.config.id2label
-                    label = id2label.get(pred_idx) or id2label.get(str(pred_idx), "unknown")
-                    
-                    # Eğer model 2 sınıflıysa (eski model) Nötr tahmini hiç gelmez.
-                    label = label.lower()
-
+                    # 1. Prediction using the Hybrid model
+                    res = hybrid.predict_proba(user_input)
+                    hybrid_probs = res["hybrid_probs"]
+                    pred_idx = res["hybrid_pred_id"]
+                    label = hybrid.id2label[pred_idx].lower()
+                    confidence = hybrid_probs[pred_idx] * 100
                     
                     col1, col2 = st.columns(2)
                     with col1:
@@ -107,6 +94,21 @@ if page == "🔍 Canlı Analiz":
                     with col2:
                         st.metric("Güven Skoru", f"%{confidence:.1f}")
                         
+                    # 2. Show sub-model probabilities for transparency
+                    st.write("**Model Oylama Dağılımı:**")
+                    import pandas as pd
+                    dist_df = pd.DataFrame({
+                        "Klasik (SVC)": res["svc_probs"] * 100,
+                        "Derin Öğrenme (BERT)": res["bert_probs"] * 100,
+                        "Nihai Hibrit Karar": hybrid_probs * 100
+                    }, index=["Negatif", "Nötr", "Pozitif"])
+                    st.dataframe(dist_df.style.format("{:.1f}%"))
+                    
+                    # 3. For attention maps, use the internal BERT model
+                    inputs = hybrid.tokenizer(user_input, return_tensors="pt", truncation=True, max_length=512).to(hybrid.device)
+                    with torch.no_grad():
+                        outputs = hybrid.bert(**inputs)
+                    
                     attentions = outputs.attentions
                     last_layer_attention = attentions[-1].cpu()
                     cls_attention = last_layer_attention[0].mean(dim=0)[0].numpy()
@@ -291,37 +293,50 @@ elif page == "📊 Genel Dashboard":
         
         if tfidf_data:
             st.subheader("En Çok Geçen Kelimeler (TF-IDF Top 20)")
-            t1, t2 = st.columns(2)
-            
+            t1, t2, t3 = st.columns(3)
             with t1:
                 pos_tfidf = pd.DataFrame(tfidf_data.get('positive', [])[:20])
                 if not pos_tfidf.empty:
                     fig_pos_tfidf = px.bar(pos_tfidf, x='score', y='word', orientation='h',
                                            title="Olumlu Yorumlarda", template="plotly_white", color_discrete_sequence=['#2ecc71'])
-                    fig_pos_tfidf.update_layout(yaxis={'categoryorder':'total ascending'})
+                    fig_pos_tfidf.update_layout(yaxis={'categoryorder':'total ascending'}, margin=dict(l=0, r=0, t=30, b=0), height=400)
                     st.plotly_chart(fig_pos_tfidf, use_container_width=True)
             with t2:
+                neu_tfidf = pd.DataFrame(tfidf_data.get('neutral', [])[:20])
+                if not neu_tfidf.empty:
+                    fig_neu_tfidf = px.bar(neu_tfidf, x='score', y='word', orientation='h',
+                                           title="Nötr Yorumlarda", template="plotly_white", color_discrete_sequence=['#f1c40f'])
+                    fig_neu_tfidf.update_layout(yaxis={'categoryorder':'total ascending'}, margin=dict(l=0, r=0, t=30, b=0), height=400)
+                    st.plotly_chart(fig_neu_tfidf, use_container_width=True)
+            with t3:
                 neg_tfidf = pd.DataFrame(tfidf_data.get('negative', [])[:20])
                 if not neg_tfidf.empty:
                     fig_neg_tfidf = px.bar(neg_tfidf, x='score', y='word', orientation='h',
                                            title="Olumsuz Yorumlarda", template="plotly_white", color_discrete_sequence=['#e74c3c'])
-                    fig_neg_tfidf.update_layout(yaxis={'categoryorder':'total ascending'})
+                    fig_neg_tfidf.update_layout(yaxis={'categoryorder':'total ascending'}, margin=dict(l=0, r=0, t=30, b=0), height=400)
                     st.plotly_chart(fig_neg_tfidf, use_container_width=True)
         
         st.markdown("---")
         
         st.subheader("Kelime Bulutları")
-        w1, w2 = st.columns(2)
+        w1, w2, w3 = st.columns(3)
         
         with w1:
-            st.markdown("**Olumlu Yorumlarda Öne Çıkan Kelimeler**")
+            st.markdown("**Olumlu Yorumlarda**")
             try:
                 st.image('visuals/wordcloud_positive.png', use_container_width=True)
             except FileNotFoundError:
                 st.warning("wordcloud_positive.png bulunamadı.")
                 
         with w2:
-            st.markdown("**Olumsuz Yorumlarda Öne Çıkan Kelimeler**")
+            st.markdown("**Nötr Yorumlarda**")
+            try:
+                st.image('visuals/wordcloud_neutral.png', use_container_width=True)
+            except FileNotFoundError:
+                st.warning("wordcloud_neutral.png bulunamadı.")
+                
+        with w3:
+            st.markdown("**Olumsuz Yorumlarda**")
             try:
                 st.image('visuals/wordcloud_negative.png', use_container_width=True)
             except FileNotFoundError:

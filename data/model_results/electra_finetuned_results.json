@@ -12,9 +12,9 @@
   },
   "data_info": {
     "total_samples": 61972,
-    "balanced_samples": 15000,
-    "training_samples": 12000,
-    "test_samples": 3000,
+    "balanced_samples": 30267,
+    "training_samples": 24213,
+    "test_samples": 6054,
     "classes": [
       "negative",
       "neutral",
@@ -22,53 +22,53 @@
     ]
   },
   "device": "cuda",
-  "gpu_name": null,
+  "gpu_name": "NVIDIA GeForce RTX 3060 Laptop GPU",
   "metrics": {
-    "accuracy": 0.6577,
-    "precision": 0.675,
-    "recall": 0.6577,
-    "f1_score": 0.6623
+    "accuracy": 0.6378,
+    "precision": 0.6717,
+    "recall": 0.6378,
+    "f1_score": 0.6435
   },
   "per_class_metrics": {
     "negative": {
-      "precision": 0.6433,
-      "recall": 0.689,
-      "f1-score": 0.6654,
-      "support": 1000.0
+      "precision": 0.6904,
+      "recall": 0.5515,
+      "f1-score": 0.6132,
+      "support": 2018.0
     },
     "neutral": {
-      "precision": 0.543,
-      "recall": 0.613,
-      "f1-score": 0.5759,
-      "support": 1000.0
+      "precision": 0.5025,
+      "recall": 0.7042,
+      "f1-score": 0.5865,
+      "support": 2018.0
     },
     "positive": {
-      "precision": 0.8387,
-      "recall": 0.671,
-      "f1-score": 0.7456,
-      "support": 1000.0
+      "precision": 0.8222,
+      "recall": 0.6576,
+      "f1-score": 0.7307,
+      "support": 2018.0
     }
   },
   "confusion_matrix": [
     [
-      689,
-      280,
-      31
+      1113,
+      846,
+      59
     ],
     [
-      289,
-      613,
-      98
+      369,
+      1421,
+      228
     ],
     [
-      93,
-      236,
-      671
+      130,
+      561,
+      1327
     ]
   ],
   "comparison_with_zero_shot": {
     "zero_shot_accuracy": 0.711,
-    "fine_tuned_accuracy": 0.6577,
-    "improvement": -5.33
+    "fine_tuned_accuracy": 0.6378,
+    "improvement": -7.32
   }
 }
