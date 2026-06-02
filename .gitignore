@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Model dosyaları (büyük dosyalar)
+models/
+my_bert_model/
+*.safetensors
+*.bin
+*.pkl
+*.pt
+*.pth
+
+# Eğitim Checkpoint'leri
+results/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Büyük CSV ve data dosyaları
+data/raw/
+data/processed/*.csv
+
+# OS
+.DS_Store
+Thumbs.db
