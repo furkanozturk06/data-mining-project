@@ -83,7 +83,7 @@ if page == "🔍 Canlı Analiz":
                     label = hybrid.id2label[pred_idx].lower()
                     confidence = hybrid_probs[pred_idx] * 100
                     
-                    col1, col2 = st.columns(2)
+                    col1, col2, col3 = st.columns(3)
                     with col1:
                         if label == "positive":
                             st.success("🟢 Olumlu Yorum")
@@ -93,6 +93,18 @@ if page == "🔍 Canlı Analiz":
                             st.error("🔴 Olumsuz Yorum")
                     with col2:
                         st.metric("Güven Skoru", f"%{confidence:.1f}")
+                    with col3:
+                        if label == "positive" and confidence >= 85:
+                            stars = "⭐⭐⭐⭐⭐ 5/5"
+                        elif label == "positive":
+                            stars = "⭐⭐⭐⭐ 4/5"
+                        elif label == "neutral":
+                            stars = "⭐⭐⭐ 3/5"
+                        elif label == "negative" and confidence < 80:
+                            stars = "⭐⭐ 2/5"
+                        else:
+                            stars = "⭐ 1/5"
+                        st.metric("Tahmini Yıldız Skoru", stars)
                         
                     # 2. Show sub-model probabilities for transparency
                     st.write("**Model Oylama Dağılımı:**")
