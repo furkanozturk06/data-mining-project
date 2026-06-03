@@ -70,8 +70,7 @@ if page == "🔍 Canlı Analiz":
         "1. Hibrit Model (BERT + Klasik ML) [Önerilen]",
         "2. XLM-RoBERTa (100 Dilli Dev Transformer)",
         "3. Bi-LSTM (Çift Yönlü Klasik Derin Öğrenme)",
-        "4. TextCNN (Evrişimli Sinir Ağı)",
-        "5. FastText (Facebook AI Hızlı Model)"
+        "4. TextCNN (Evrişimli Sinir Ağı)"
     ])
     
     user_input = st.text_area("Yorumunuzu girin:", placeholder="Yorumunuzu buraya yazın...")
