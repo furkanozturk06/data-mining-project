@@ -90,10 +90,52 @@ if page == "🔍 Canlı Analiz":
                         pred_idx = res["hybrid_pred_id"]
                         label = hybrid.id2label[pred_idx].lower()
                         confidence = hybrid_probs[pred_idx] * 100
-                    else:
-                        st.info("⚠️ Bu modelin arka planda eğitimi (Notebook üzerinden) henüz tamamlanmadı. Eğitim bitip modeller kaydedildiğinde sonuçlar burada görünecektir.")
-                        label = "neutral"
-                        confidence = 0.0
+                    elif "XLM-RoBERTa" in selected_model:
+                        from dl_inference import load_xlm_roberta
+                        import torch
+                        import torch.nn.functional as F
+                        tokenizer, model = load_xlm_roberta()
+                        if model is None:
+                            st.info("⚠️ XLM-RoBERTa modelinin eğitimi veya indirme işlemi henüz tamamlanmadı.")
+                            label = "neutral"
+                            confidence = 0.0
+                        else:
+                            device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+                            inputs = tokenizer(user_input, return_tensors="pt", truncation=True, max_length=128).to(device)
+                            with torch.no_grad():
+                                outputs = model(**inputs)
+                                probs = F.softmax(outputs.logits, dim=1).cpu().numpy()[0]
+                            pred_idx = int(torch.argmax(outputs.logits, dim=1).item())
+                            id2label = {0: "negative", 1: "neutral", 2: "positive"}
+                            label = id2label[pred_idx]
+                            confidence = probs[pred_idx] * 100
+                    elif "Bi-LSTM" in selected_model or "TextCNN" in selected_model:
+                        from dl_inference import load_dl_components
+                        import torch
+                        import torch.nn.functional as F
+                        vocab, bilstm, textcnn = load_dl_components()
+                        
+                        is_bilstm = "Bi-LSTM" in selected_model
+                        active_model = bilstm if is_bilstm else textcnn
+                        
+                        if active_model is None or vocab is None:
+                            st.info(f"⚠️ {selected_model.split('(')[0].strip()} modelinin arka planda eğitimi (Notebook üzerinden) henüz tamamlanmadı.")
+                            label = "neutral"
+                            confidence = 0.0
+                        else:
+                            device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+                            tokens = str(user_input).lower().split()
+                            encoded = [vocab.get(t, vocab.get('<UNK>', 1)) for t in tokens][:128]
+                            padding = [vocab.get('<PAD>', 0)] * (128 - len(encoded))
+                            tensor = torch.tensor([encoded + padding], dtype=torch.long).to(device)
+                            
+                            with torch.no_grad():
+                                outputs = active_model(tensor)
+                                probs = F.softmax(outputs, dim=1).cpu().numpy()[0]
+                            pred_idx = int(torch.argmax(outputs, dim=1).item())
+                            id2label = {0: "negative", 1: "neutral", 2: "positive"}
+                            label = id2label[pred_idx]
+                            confidence = probs[pred_idx] * 100
                     
                     col1, col2, col3 = st.columns(3)
                     with col1:
