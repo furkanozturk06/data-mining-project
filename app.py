@@ -425,7 +425,7 @@ elif page == "📊 Genel Dashboard":
 # ==========================================
 elif page == "🤖 Model Karşılaştırma":
     st.title("🤖 Model Performans Karşılaştırması")
-    st.markdown("Bu projede kullanılan tüm modellerin (Klasik Baseline vs. Derin Öğrenme BERT) performans karşılaştırması.")
+    st.markdown("Bu projede kullanılan tüm modellerin (Klasik Makine Öğrenmesi, Bi-LSTM, TextCNN, FastText, BERT) genel performans karşılaştırması.")
     
     if model_comp_df.empty:
         st.warning("Model karşılaştırma verisi bulunamadı (data/processed/model_comparison.csv). Lütfen notebook adımını tamamlayın.")
@@ -470,8 +470,7 @@ elif page == "🤖 Model Karşılaştırma":
             )
             st.plotly_chart(fig_radar, use_container_width=True)
             
-        st.info("Bu projede canlı tahmin için BERT (savasy/bert-base-turkish-sentiment-clas) kullanılmaktadır. "
-                "Hazır Türkçe dil modelidir, fine-tune gerektirmez.")
+        st.info("Not: Bu tablodaki metrikler, modellerin test verisindeki doğruluk oranlarını yansıtmaktadır. Canlı tahminler için sol menüden istediğiniz modeli seçebilirsiniz.")
 
 # requirements.txt içeriği:
 # streamlit
