@@ -64,7 +64,15 @@ page = st.sidebar.radio("Sayfalar", [
 # ==========================================
 if page == "🔍 Canlı Analiz":
     st.title("🔍 Canlı Duygu Analizi")
-    st.markdown("Yapay zeka (BERT) modelinin girdiğiniz yorumun duygu durumunu nasıl sınıflandırdığını görün.")
+    st.markdown("Farklı yapay zeka mimarilerinin girdiğiniz yorumun duygu durumunu nasıl sınıflandırdığını kıyaslayın.")
+    
+    selected_model = st.selectbox("🤖 Kullanılacak Yapay Zeka Modelini Seçin:", [
+        "1. Hibrit Model (BERT + Klasik ML) [Önerilen]",
+        "2. XLM-RoBERTa (100 Dilli Dev Transformer)",
+        "3. Bi-LSTM (Çift Yönlü Klasik Derin Öğrenme)",
+        "4. TextCNN (Evrişimli Sinir Ağı)",
+        "5. FastText (Facebook AI Hızlı Model)"
+    ])
     
     user_input = st.text_area("Yorumunuzu girin:", placeholder="Yorumunuzu buraya yazın...")
     
@@ -74,14 +82,19 @@ if page == "🔍 Canlı Analiz":
         else:
             with st.spinner("Analiz ediliyor..."):
                 try:
-                    hybrid = load_hybrid_model()
-                    
-                    # 1. Prediction using the Hybrid model
-                    res = hybrid.predict_proba(user_input)
-                    hybrid_probs = res["hybrid_probs"]
-                    pred_idx = res["hybrid_pred_id"]
-                    label = hybrid.id2label[pred_idx].lower()
-                    confidence = hybrid_probs[pred_idx] * 100
+                    if "Hibrit Model" in selected_model:
+                        hybrid = load_hybrid_model()
+                        
+                        # Prediction using the Hybrid model
+                        res = hybrid.predict_proba(user_input)
+                        hybrid_probs = res["hybrid_probs"]
+                        pred_idx = res["hybrid_pred_id"]
+                        label = hybrid.id2label[pred_idx].lower()
+                        confidence = hybrid_probs[pred_idx] * 100
+                    else:
+                        st.info("⚠️ Bu modelin arka planda eğitimi (Notebook üzerinden) henüz tamamlanmadı. Eğitim bitip modeller kaydedildiğinde sonuçlar burada görünecektir.")
+                        label = "neutral"
+                        confidence = 0.0
                     
                     col1, col2, col3 = st.columns(3)
                     with col1:
@@ -106,42 +119,43 @@ if page == "🔍 Canlı Analiz":
                             stars = "⭐ 1/5"
                         st.metric("Tahmini Yıldız Skoru", stars)
                         
-                    # 2. Show sub-model probabilities for transparency
-                    st.write("**Model Oylama Dağılımı:**")
-                    import pandas as pd
-                    dist_df = pd.DataFrame({
-                        "Klasik (SVC)": res["svc_probs"] * 100,
-                        "Derin Öğrenme (BERT)": res["bert_probs"] * 100,
-                        "Nihai Hibrit Karar": hybrid_probs * 100
-                    }, index=["Negatif", "Nötr", "Pozitif"])
-                    st.dataframe(dist_df.style.format("{:.1f}%"))
-                    
-                    # 3. For attention maps, use the internal BERT model
-                    inputs = hybrid.tokenizer(user_input, return_tensors="pt", truncation=True, max_length=512).to(hybrid.device)
-                    with torch.no_grad():
-                        outputs = hybrid.bert(**inputs, output_attentions=True)
-                    
-                    attentions = outputs.attentions
-                    last_layer_attention = attentions[-1].cpu()
-                    cls_attention = last_layer_attention[0].mean(dim=0)[0].numpy()
-                    
-                    tokens = hybrid.tokenizer.convert_ids_to_tokens(inputs['input_ids'][0])
-                    valid_indices = [i for i, t in enumerate(tokens) if t not in ['[CLS]', '[SEP]', '[PAD]']]
-                    clean_tokens = [tokens[i].replace('##', '') for i in valid_indices]
-                    clean_attentions = [cls_attention[i] for i in valid_indices]
-                    
-                    if len(clean_tokens) > 0:
-                        sum_att = sum(clean_attentions)
-                        norm_att = [a / sum_att for a in clean_attentions] if sum_att > 0 else clean_attentions
+                    # 2. Show sub-model probabilities for transparency (Only for Hybrid)
+                    if "Hibrit Model" in selected_model:
+                        st.write("**Model Oylama Dağılımı:**")
+                        import pandas as pd
+                        dist_df = pd.DataFrame({
+                            "Klasik (SVC)": res["svc_probs"] * 100,
+                            "Derin Öğrenme (BERT)": res["bert_probs"] * 100,
+                            "Nihai Hibrit Karar": hybrid_probs * 100
+                        }, index=["Negatif", "Nötr", "Pozitif"])
+                        st.dataframe(dist_df.style.format("{:.1f}%"))
                         
-                        fig = px.bar(
-                            x=clean_tokens, 
-                            y=norm_att,
-                            labels={'x': 'Kelime', 'y': 'Etki (Attention Ağırlığı)'},
-                            title="Hangi kelimeler etkili oldu?",
-                            template="plotly_white"
-                        )
-                        st.plotly_chart(fig, use_container_width=True)
+                        # 3. For attention maps, use the internal BERT model
+                        inputs = hybrid.tokenizer(user_input, return_tensors="pt", truncation=True, max_length=512).to(hybrid.device)
+                        with torch.no_grad():
+                            outputs = hybrid.bert(**inputs, output_attentions=True)
+                        
+                        attentions = outputs.attentions
+                        last_layer_attention = attentions[-1].cpu()
+                        cls_attention = last_layer_attention[0].mean(dim=0)[0].numpy()
+                        
+                        tokens = hybrid.tokenizer.convert_ids_to_tokens(inputs['input_ids'][0])
+                        valid_indices = [i for i, t in enumerate(tokens) if t not in ['[CLS]', '[SEP]', '[PAD]']]
+                        clean_tokens = [tokens[i].replace('##', '') for i in valid_indices]
+                        clean_attentions = [cls_attention[i] for i in valid_indices]
+                        
+                        if len(clean_tokens) > 0:
+                            sum_att = sum(clean_attentions)
+                            norm_att = [a / sum_att for a in clean_attentions] if sum_att > 0 else clean_attentions
+                            
+                            fig = px.bar(
+                                x=clean_tokens, 
+                                y=norm_att,
+                                labels={'x': 'Kelime', 'y': 'Etki (Attention Ağırlığı)'},
+                                title="Hangi kelimeler etkili oldu?",
+                                template="plotly_white"
+                            )
+                            st.plotly_chart(fig, use_container_width=True)
                         
                 except Exception as e:
                     st.error(f"Tahmin sırasında bir hata oluştu: {str(e)}")
