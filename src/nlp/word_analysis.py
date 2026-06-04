@@ -38,16 +38,22 @@ def get_tfidf_top_words(
     n: int = 20,
 ) -> dict:
     """
-    Return top-n TF-IDF words for positive (>=4), neutral (==3), and negative (<=2) reviews.
+    Return top-n TF-IDF words for positive, neutral, and negative reviews.
+    Uses 'sentiment_label' column (Groq-labeled) if available, else falls back to star rating.
     Returns {'positive': [(word, score)], 'neutral': [...], 'negative': [(word, score)]}.
     """
-    df = df.dropna(subset=[text_col, sentiment_col]).copy()
+    df = df.dropna(subset=[text_col]).copy()
     df["clean"] = df[text_col].apply(_clean_text)
 
-    # rating == 3.0 comparison works for both int and float dtypes
-    pos_texts = [t for t in df[df[sentiment_col] >= 4]["clean"].tolist() if t.strip()]
-    neu_texts = [t for t in df[df[sentiment_col].between(2.5, 3.5)]["clean"].tolist() if t.strip()]
-    neg_texts = [t for t in df[df[sentiment_col] <= 2]["clean"].tolist() if t.strip()]
+    if "sentiment_label" in df.columns:
+        pos_texts = [t for t in df[df["sentiment_label"] == "pozitif"]["clean"].tolist() if t.strip()]
+        neu_texts = [t for t in df[df["sentiment_label"] == "nötr"]["clean"].tolist() if t.strip()]
+        neg_texts = [t for t in df[df["sentiment_label"] == "negatif"]["clean"].tolist() if t.strip()]
+    else:
+        df = df.dropna(subset=[sentiment_col])
+        pos_texts = [t for t in df[df[sentiment_col] >= 4]["clean"].tolist() if t.strip()]
+        neu_texts = [t for t in df[df[sentiment_col].between(2.5, 3.5)]["clean"].tolist() if t.strip()]
+        neg_texts = [t for t in df[df[sentiment_col] <= 2]["clean"].tolist() if t.strip()]
 
     results = {}
     for label, texts in [("positive", pos_texts), ("neutral", neu_texts), ("negative", neg_texts)]:
