@@ -17,6 +17,8 @@ from src.nlp.word_analysis import (
     get_top_bottom_reviews,
     get_available_apps,
 )
+from src.nlp.groq_summary import generate_app_summary, predict_sentiment
+from src.config import GROQ_API_KEY
 
 st.set_page_config(
     page_title="Yorum Duygu Analizi",
@@ -25,21 +27,41 @@ st.set_page_config(
 )
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "data", "raw")
+PROCESSED_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "data", "processed")
+LABELED_CSV = os.path.join(PROCESSED_DIR, "all_reviews_labeled.csv")
+CLEAN_CSV = os.path.join(PROCESSED_DIR, "all_reviews_clean.csv")
 
 
 @st.cache_data
-def load_data() -> pd.DataFrame:
-    dfs = []
-    for fname in ("app_store_reviews.csv", "google_play_reviews.csv"):
-        path = os.path.join(DATA_DIR, fname)
-        if os.path.exists(path):
-            dfs.append(pd.read_csv(path))
-    if not dfs:
-        return pd.DataFrame()
-    df = pd.concat(dfs, ignore_index=True)
+def load_data() -> tuple[pd.DataFrame, bool]:
+    """Load reviews. Returns (df, is_groq_labeled)."""
+    if os.path.exists(LABELED_CSV):
+        df = pd.read_csv(LABELED_CSV)
+        is_labeled = "sentiment_label" in df.columns
+    elif os.path.exists(CLEAN_CSV):
+        df = pd.read_csv(CLEAN_CSV)
+        is_labeled = False
+    else:
+        dfs = []
+        for fname in ("app_store_reviews.csv", "google_play_reviews.csv"):
+            path = os.path.join(DATA_DIR, fname)
+            if os.path.exists(path):
+                dfs.append(pd.read_csv(path))
+        if not dfs:
+            return pd.DataFrame(), False
+        df = pd.concat(dfs, ignore_index=True)
+        is_labeled = False
+
     df["rating"] = pd.to_numeric(df["rating"], errors="coerce")
     df["text"] = df["text"].fillna("").astype(str)
-    return df
+    return df, is_labeled
+
+
+@st.cache_data(ttl=3600)
+def cached_app_summary(app_name: str, review_count: int) -> str:
+    """Cache per-app Groq summaries for 1 hour."""
+    df, _ = load_data()
+    return generate_app_summary(df, app_name)
 
 
 def render_sentiment_badge(label: str, pos: float, neg: float):
@@ -89,10 +111,13 @@ def render_word_weights_chart(weights: list):
 
 # ── Tabs ──────────────────────────────────────────────────────────────────────
 
-df = load_data()
+df, is_groq_labeled = load_data()
 
 st.title("Yorum Duygu Analizi")
-st.caption("BERT tabanlı Türkçe duygu analizi · App Store & Google Play verileri")
+if is_groq_labeled:
+    st.caption("BERT tabanlı Türkçe duygu analizi · App Store & Google Play verileri · Groq etiketleri aktif ✓")
+else:
+    st.caption("BERT tabanlı Türkçe duygu analizi · App Store & Google Play verileri")
 
 tab1, tab2, tab3, tab4 = st.tabs([
     "🤖 Duygu Testi",
@@ -110,8 +135,8 @@ with tab1:
         height=120,
     )
     if st.button("Analiz Et", type="primary", disabled=not user_input.strip()):
-        with st.spinner("BERT modeli analiz ediyor..."):
-            result = predict(user_input)
+        with st.spinner("Analiz ediliyor..."):
+            result = predict_sentiment(user_input)
             weights = get_word_weights(user_input)
 
         render_sentiment_badge(result["label"], result["positive"], result["negative"])
@@ -135,11 +160,52 @@ with tab2:
         selected_app = st.selectbox("Uygulama seçin:", apps)
         n_reviews = st.slider("Kaç yorum listelensin?", 3, 10, 5)
 
-        if st.button("Yorumları Getir", type="primary"):
-            with st.spinner("Yorumlar yükleniyor..."):
-                result = get_top_bottom_reviews(df, selected_app, n_reviews)
+        col_btn, col_summary_btn = st.columns([1, 1])
+        get_reviews = col_btn.button("Yorumları Getir", type="primary")
+        get_summary = col_summary_btn.button(
+            "AI Özeti Oluştur",
+            type="secondary",
+            disabled=not GROQ_API_KEY,
+            help="GROQ_API_KEY gerekli" if not GROQ_API_KEY else "Groq ile uygulama özeti oluştur",
+        )
 
-            st.info(f"**{selected_app}** için toplam **{result['total']:,}** yorum bulundu.")
+        # Session state ile her iki sonucu da sakla
+        if "tab2_summary" not in st.session_state:
+            st.session_state.tab2_summary = None
+        if "tab2_summary_app" not in st.session_state:
+            st.session_state.tab2_summary_app = None
+        if "tab2_reviews" not in st.session_state:
+            st.session_state.tab2_reviews = None
+        if "tab2_reviews_app" not in st.session_state:
+            st.session_state.tab2_reviews_app = None
+
+        if get_summary:
+            with st.spinner(f"{selected_app} özeti oluşturuluyor..."):
+                try:
+                    app_subset = df[df["app_name"].str.lower() == selected_app.strip().lower()]
+                    st.session_state.tab2_summary = cached_app_summary(selected_app, len(app_subset))
+                    st.session_state.tab2_summary_app = selected_app
+                except Exception as e:
+                    st.session_state.tab2_summary = f"HATA: {e}"
+                    st.session_state.tab2_summary_app = selected_app
+
+        if get_reviews:
+            with st.spinner("Yorumlar yükleniyor..."):
+                st.session_state.tab2_reviews = get_top_bottom_reviews(df, selected_app, n_reviews)
+                st.session_state.tab2_reviews_app = selected_app
+
+        # Özet varsa göster
+        if st.session_state.tab2_summary:
+            if st.session_state.tab2_summary.startswith("HATA:"):
+                st.error(st.session_state.tab2_summary)
+            else:
+                st.info(f"**AI Özeti ({st.session_state.tab2_summary_app}):** {st.session_state.tab2_summary}")
+
+        # Yorumlar varsa göster
+        if st.session_state.tab2_reviews:
+            result = st.session_state.tab2_reviews
+            app_label = st.session_state.tab2_reviews_app
+            st.info(f"**{app_label}** için toplam **{result['total']:,}** yorum bulundu.")
 
             col1, col2 = st.columns(2)
 
