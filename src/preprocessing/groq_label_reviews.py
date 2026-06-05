@@ -149,7 +149,7 @@ def main():
     processed = 0
     batch_count = 0
 
-    rows = conflict_df.to_dict("records")
+    rows = remaining_df.to_dict("records")
 
     for start in range(0, len(rows), BATCH_SIZE):
         batch = rows[start:start + BATCH_SIZE]

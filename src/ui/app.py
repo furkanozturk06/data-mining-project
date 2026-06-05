@@ -169,20 +169,43 @@ with tab2:
             help="GROQ_API_KEY gerekli" if not GROQ_API_KEY else "Groq ile uygulama özeti oluştur",
         )
 
+        # Session state ile her iki sonucu da sakla
+        if "tab2_summary" not in st.session_state:
+            st.session_state.tab2_summary = None
+        if "tab2_summary_app" not in st.session_state:
+            st.session_state.tab2_summary_app = None
+        if "tab2_reviews" not in st.session_state:
+            st.session_state.tab2_reviews = None
+        if "tab2_reviews_app" not in st.session_state:
+            st.session_state.tab2_reviews_app = None
+
         if get_summary:
-            with st.spinner(f"{selected_app} yorumları analiz ediliyor..."):
+            with st.spinner(f"{selected_app} özeti oluşturuluyor..."):
                 try:
                     app_subset = df[df["app_name"].str.lower() == selected_app.strip().lower()]
-                    summary = cached_app_summary(selected_app, len(app_subset))
-                    st.info(f"**AI Özeti ({selected_app}):** {summary}")
+                    st.session_state.tab2_summary = cached_app_summary(selected_app, len(app_subset))
+                    st.session_state.tab2_summary_app = selected_app
                 except Exception as e:
-                    st.error(f"Özet oluşturulamadı: {e}")
+                    st.session_state.tab2_summary = f"HATA: {e}"
+                    st.session_state.tab2_summary_app = selected_app
 
         if get_reviews:
             with st.spinner("Yorumlar yükleniyor..."):
-                result = get_top_bottom_reviews(df, selected_app, n_reviews)
+                st.session_state.tab2_reviews = get_top_bottom_reviews(df, selected_app, n_reviews)
+                st.session_state.tab2_reviews_app = selected_app
 
-            st.info(f"**{selected_app}** için toplam **{result['total']:,}** yorum bulundu.")
+        # Özet varsa göster
+        if st.session_state.tab2_summary:
+            if st.session_state.tab2_summary.startswith("HATA:"):
+                st.error(st.session_state.tab2_summary)
+            else:
+                st.info(f"**AI Özeti ({st.session_state.tab2_summary_app}):** {st.session_state.tab2_summary}")
+
+        # Yorumlar varsa göster
+        if st.session_state.tab2_reviews:
+            result = st.session_state.tab2_reviews
+            app_label = st.session_state.tab2_reviews_app
+            st.info(f"**{app_label}** için toplam **{result['total']:,}** yorum bulundu.")
 
             col1, col2 = st.columns(2)
 
