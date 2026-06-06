@@ -109,7 +109,7 @@ def render_word_weights_chart(weights: list):
     st.plotly_chart(fig, use_container_width=True)
 
 
-# ── Tabs ──────────────────────────────────────────────────────────────────────
+# Tabs
 
 df, is_groq_labeled = load_data()
 
@@ -126,7 +126,7 @@ tab1, tab2, tab3, tab4 = st.tabs([
     "📊 Kelime Analizi",
 ])
 
-# ── Tab 1: Duygu Testi ────────────────────────────────────────────────────────
+# Tab 1: Duygu Testi
 with tab1:
     st.subheader("Yorumunuzu Analiz Edin")
     user_input = st.text_area(
@@ -150,7 +150,7 @@ with tab1:
             for word, score in weights:
                 st.write(f"`{word}` → {score:.4f}")
 
-# ── Tab 2: Firma Arama ────────────────────────────────────────────────────────
+# Tab 2: Firma Arama
 with tab2:
     st.subheader("Uygulama / Firma Arama")
     if df.empty:
@@ -226,7 +226,7 @@ with tab2:
                         st.write(r["text"][:400] + ("..." if len(r["text"]) > 400 else ""))
                         st.caption(f"{r['author']} · {str(r['date'])[:10]}")
 
-# ── Tab 3: Kelime Bulutu ──────────────────────────────────────────────────────
+# Tab 3: Kelime Bulutu
 with tab3:
     st.subheader("Kelime Bulutu")
     if df.empty:
@@ -265,7 +265,7 @@ with tab3:
                 else:
                     st.info("Olumsuz yorum bulunamadı.")
 
-# ── Tab 4: Kelime Analizi ─────────────────────────────────────────────────────
+# Tab 4: Kelime Analizi
 with tab4:
     st.subheader("TF-IDF Kelime Ağırlık Analizi")
     if df.empty:
