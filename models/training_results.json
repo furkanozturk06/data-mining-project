@@ -1,0 +1,26 @@
+{
+  "Logistic Regression": {
+    "accuracy": 68.87,
+    "precision": 66.0,
+    "recall": 68.87,
+    "f1_score": 66.91
+  },
+  "SVM": {
+    "accuracy": 68.42,
+    "precision": 65.47,
+    "recall": 68.42,
+    "f1_score": 66.42
+  },
+  "TextCNN": {
+    "accuracy": 67.36,
+    "precision": 64.06,
+    "recall": 67.36,
+    "f1_score": 65.11
+  },
+  "Bi-LSTM + Attention": {
+    "accuracy": 65.23,
+    "precision": 63.56,
+    "recall": 65.23,
+    "f1_score": 64.29
+  }
+}
