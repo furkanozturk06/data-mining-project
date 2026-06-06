@@ -17,7 +17,8 @@ from src.nlp.word_analysis import (
     get_top_bottom_reviews,
     get_available_apps,
 )
-from src.nlp.groq_summary import generate_app_summary, predict_sentiment
+from src.nlp.groq_summary import generate_app_summary
+from src.nlp.inference import predict_sentiment_all
 from src.config import GROQ_API_KEY
 
 st.set_page_config(
@@ -65,9 +66,16 @@ def cached_app_summary(app_name: str, review_count: int) -> str:
 
 
 def render_sentiment_badge(label: str, pos: float, neg: float):
-    is_positive = label == "positive"
-    color = "#27ae60" if is_positive else "#e74c3c"
-    emoji = "✅ Olumlu" if is_positive else "❌ Olumsuz"
+    lbl = label.lower()
+    if lbl in ["positive", "pozitif"]:
+        color = "#27ae60"
+        emoji = "✅ Olumlu"
+    elif lbl in ["neutral", "nötr"]:
+        color = "#f39c12"
+        emoji = "➖ Nötr"
+    else:
+        color = "#e74c3c"
+        emoji = "❌ Olumsuz"
     st.markdown(
         f"""
         <div style="background:{color};padding:16px 24px;border-radius:10px;text-align:center;margin:10px 0">
@@ -129,14 +137,27 @@ tab1, tab2, tab3, tab4 = st.tabs([
 # Tab 1: Duygu Testi
 with tab1:
     st.subheader("Yorumunuzu Analiz Edin")
+    
+    selected_model = st.selectbox(
+        "Analiz için Model Seçin:",
+        [
+            "BERT (HuggingFace)",
+            "LLM (Llama-3)",
+            "Lojistik Regresyon",
+            "Destek Vektör Makineleri (SVM)",
+            "TextCNN (Derin Öğrenme)",
+            "Bi-LSTM + Attention"
+        ]
+    )
+    
     user_input = st.text_area(
         "Yorumunuzu buraya yazın:",
         placeholder="Örnek: Bu uygulama çok güzel, her şey mükemmel çalışıyor!",
         height=120,
     )
     if st.button("Analiz Et", type="primary", disabled=not user_input.strip()):
-        with st.spinner("Analiz ediliyor..."):
-            result = predict_sentiment(user_input)
+        with st.spinner(f"{selected_model} modeli yükleniyor ve analiz ediliyor..."):
+            result = predict_sentiment_all(user_input, selected_model)
             weights = get_word_weights(user_input)
 
         render_sentiment_badge(result["label"], result["positive"], result["negative"])
