@@ -44,6 +44,7 @@ Günümüzde müşteriler satın alma kararlarını büyük ölçüde diğer kul
 | Yelp | Web Scraping | İşletme yorumları + puan |
 | Trustpilot | Web Scraping | Ürün/hizmet yorumları + puan |
 | Google Reviews | Web Scraping | İşletme yorumları + puan |
+| Play Store | Scraping | İşletme yorumları + puan |
 | E-ticaret platformları | Web Scraping | Ürün yorumları + puan |
 
 ---
@@ -59,9 +60,9 @@ Problem Tanımı → Veri Toplama → Keşifsel Analiz → Ön İşleme → Mode
 | Problem tanımı ve planlama | Tamamlandı |
 | Veri toplama (Web Scraping) | Tamamlandı |
 | Veri anlama ve keşifsel analiz | Tamamlandı |
-| Veri ön işleme | Devam ediyor |
-| Modelleme | Bekliyor |
-| Değerlendirme | Bekliyor |
+| Veri ön işleme | Tamamlandı |
+| Modelleme | Tamamlandı |
+| Değerlendirme | Devam ediyor |
 | Görselleştirme | Bekliyor |
 | Final raporu ve sunum | Bekliyor |
 
