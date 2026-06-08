@@ -74,7 +74,7 @@ Veri seti %80 eğitim / %20 test olarak ayrılmış (`stratify`, `random_state=4
 
 | Model | Aile | Accuracy | Precision | Recall | F1-Score |
 |-------|------|:--------:|:---------:|:------:|:--------:|
-| **Logistic Regression** 🏆 | Klasik ML (TF-IDF) | **%68.87** | %66.00 | %68.87 | **%66.91** |
+| **Logistic Regression**  | Klasik ML (TF-IDF) | **%68.87** | %66.00 | %68.87 | **%66.91** |
 | SVM (LinearSVC) | Klasik ML (TF-IDF) | %68.42 | %65.47 | %68.42 | %66.42 |
 | TextCNN | Derin Öğrenme | %67.36 | %64.06 | %67.36 | %65.11 |
 | Bi-LSTM + Attention | Derin Öğrenme | %65.23 | %63.56 | %65.23 | %64.29 |
@@ -106,10 +106,10 @@ Proje, Streamlit tabanlı 4 sekmeli bir web uygulaması içerir:
 
 | Sekme | İşlev |
 |-------|-------|
-| 🤖 **Duygu Testi** | Girilen yorumu 6 farklı modelden (BERT, LLM, LogReg, SVM, TextCNN, Bi-LSTM) biriyle analiz eder; BERT attention kelime ağırlıklarını grafikle gösterir. |
-| 🏢 **Firma Arama** | Bir uygulamayı seçip en iyi/en kötü yorumlarını listeler ve Groq ile yapay zekâ destekli özet üretir. |
-| ☁️ **Kelime Bulutu** | Olumlu / nötr / olumsuz yorumlardaki öne çıkan kelimeleri TF-IDF tabanlı kelime bulutlarıyla görselleştirir. |
-| 📊 **Kelime Analizi** | Duygu sınıflarına göre en yüksek TF-IDF skorlu kelimeleri çubuk grafiklerle ve özet istatistiklerle sunar. |
+| **Duygu Testi** | Girilen yorumu 6 farklı modelden (BERT, LLM, LogReg, SVM, TextCNN, Bi-LSTM) biriyle analiz eder; BERT attention kelime ağırlıklarını grafikle gösterir. |
+| **Firma Arama** | Bir uygulamayı seçip en iyi/en kötü yorumlarını listeler ve Groq ile yapay zekâ destekli özet üretir. |
+| **Kelime Bulutu** | Olumlu / nötr / olumsuz yorumlardaki öne çıkan kelimeleri TF-IDF tabanlı kelime bulutlarıyla görselleştirir. |
+| **Kelime Analizi** | Duygu sınıflarına göre en yüksek TF-IDF skorlu kelimeleri çubuk grafiklerle ve özet istatistiklerle sunar. |
 
 ---
 
@@ -235,14 +235,14 @@ streamlit run src/ui/app.py
 
 | Aşama | Durum |
 |-------|-------|
-| Problem tanımı ve planlama | ✅ Tamamlandı |
-| Veri toplama (Web Scraping) | ✅ Tamamlandı |
-| Veri temizleme ve ön işleme | ✅ Tamamlandı |
-| Hibrit etiketleme (yıldız + LLM) | ✅ Tamamlandı |
-| Modelleme (4 model) | ✅ Tamamlandı |
-| LLM ve BERT değerlendirmesi | ✅ Tamamlandı |
-| Görselleştirme ve arayüz | ✅ Tamamlandı |
-| Final raporu ve sunum | ✅ Tamamlandı |
+| Problem tanımı ve planlama | Tamamlandı |
+| Veri toplama (Web Scraping) | Tamamlandı |
+| Veri temizleme ve ön işleme | Tamamlandı |
+| Hibrit etiketleme (yıldız + LLM) | Tamamlandı |
+| Modelleme (4 model) | Tamamlandı |
+| LLM ve BERT değerlendirmesi | Tamamlandı |
+| Görselleştirme ve arayüz | Tamamlandı |
+| Final raporu ve sunum | Tamamlandı |
 
 ---
 
