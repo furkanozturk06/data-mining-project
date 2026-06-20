@@ -6,6 +6,16 @@ import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 
 import streamlit as st
+
+# Streamlit Cloud, "Secrets" alanindaki degerleri st.secrets icinde tutar.
+# Kod GROQ_API_KEY'i ortam degiskeninden (os.getenv) okudugu icin, varsa
+# st.secrets'taki anahtari ortam degiskenine kopyaliyoruz ki AI Ozeti calissin.
+try:
+    if "GROQ_API_KEY" in st.secrets:
+        os.environ["GROQ_API_KEY"] = str(st.secrets["GROQ_API_KEY"])
+except Exception:
+    pass
+
 import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
