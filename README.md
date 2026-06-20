@@ -12,6 +12,12 @@ Türkçe mobil uygulama yorumları üzerinde duygu analizi · App Store & Google
 ![Streamlit](https://img.shields.io/badge/Streamlit-UI-FF4B4B)
 ![Groq](https://img.shields.io/badge/Groq-Llama%203-black)
 
+### 🌐 Canlı Demo
+
+[![Canlı Demo](https://img.shields.io/badge/🌐_Uygulamayı_Aç-Streamlit_Cloud-FF4B4B?logo=streamlit&logoColor=white)](https://musteri-memnuniyet-data-mining.streamlit.app/)
+
+**[musteri-memnuniyet-data-mining.streamlit.app](https://musteri-memnuniyet-data-mining.streamlit.app/)** — kurulum gerektirmez, tarayıcıdan doğrudan kullanılabilir.
+
 </div>
 
 ---
@@ -102,6 +108,8 @@ Veri seti %80 eğitim / %20 test olarak ayrılmış (`stratify`, `random_state=4
 
 ## İnteraktif Arayüz (Streamlit)
 
+> 🌐 **Canlı uygulama:** [musteri-memnuniyet-data-mining.streamlit.app](https://musteri-memnuniyet-data-mining.streamlit.app/) — Streamlit Community Cloud üzerinde yayında.
+
 Proje, Streamlit tabanlı 4 sekmeli bir web uygulaması içerir:
 
 | Sekme | İşlev |
@@ -110,6 +118,13 @@ Proje, Streamlit tabanlı 4 sekmeli bir web uygulaması içerir:
 | **Firma Arama** | Bir uygulamayı seçip en iyi/en kötü yorumlarını listeler ve Groq ile yapay zekâ destekli özet üretir. |
 | **Kelime Bulutu** | Olumlu / nötr / olumsuz yorumlardaki öne çıkan kelimeleri TF-IDF tabanlı kelime bulutlarıyla görselleştirir. |
 | **Kelime Analizi** | Duygu sınıflarına göre en yüksek TF-IDF skorlu kelimeleri çubuk grafiklerle ve özet istatistiklerle sunar. |
+
+---
+
+## Proje Raporu ve Ekran Görüntüleri
+
+- **Final Raporu (IEEE formatında):** [rapor.pdf](rapor.pdf) · [rapor.docx](rapor.docx)
+- **Arayüz ve analiz ekran görüntüleri:** [`görseller/`](görseller/) klasöründe yer alır — Duygu Testi, Firma Arama, Kelime Bulutu ve Kelime Analizi sekmelerinin gerçek görünümleri ile sınıf bazında kelime bulutu ve TF-IDF analizleri.
 
 ---
 
@@ -161,6 +176,9 @@ musteri-memnuniyet-analizi/
 │   └── ui/
 │       └── app.py                    # Streamlit arayüzü
 │
+├── görseller/                        # Arayüz ve analiz ekran görüntüleri
+├── rapor.docx                        # Final raporu (IEEE formatı)
+├── rapor.pdf                         # Final raporu (PDF)
 ├── requirements.txt
 ├── Veri_Madenciligi_Ön_Sunum.pptx
 └── README.md
