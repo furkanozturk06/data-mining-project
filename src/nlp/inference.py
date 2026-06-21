@@ -26,21 +26,29 @@ def get_ml_resources():
 def get_dl_resources():
     if "vocab" not in _models_cache:
         _models_cache["vocab"] = load_pkl("vocabulary.pkl")
-        
+
         vocab_size = len(_models_cache["vocab"].word2idx)
-        embed_dim = 100
-        num_classes = 3
-        
-        # TextCNN Yükle
-        textcnn = TextCNN(vocab_size, embed_dim, num_classes)
+
+        # TextCNN Yükle — boyutlar checkpoint'ten okunur (eğitimle birebir aynı olmalı)
         ckpt_cnn = torch.load(os.path.join(MODELS_DIR, "textcnn.pt"), map_location=torch.device('cpu'), weights_only=True)
+        textcnn = TextCNN(
+            ckpt_cnn.get("vocab_size", vocab_size),
+            ckpt_cnn.get("embed_dim", 128),
+            ckpt_cnn.get("num_classes", 3),
+        )
         textcnn.load_state_dict(ckpt_cnn["model_state_dict"])
         textcnn.eval()
         _models_cache["textcnn"] = textcnn
-        
-        # Bi-LSTM Yükle
-        bilstm = BiLSTMAttention(vocab_size, embed_dim, hidden_dim=128, num_classes=num_classes, num_layers=2)
+
+        # Bi-LSTM Yükle — boyutlar checkpoint'ten okunur
         ckpt_lstm = torch.load(os.path.join(MODELS_DIR, "bilstm_attention.pt"), map_location=torch.device('cpu'), weights_only=True)
+        bilstm = BiLSTMAttention(
+            ckpt_lstm.get("vocab_size", vocab_size),
+            ckpt_lstm.get("embed_dim", 128),
+            hidden_dim=ckpt_lstm.get("hidden_dim", 128),
+            num_classes=ckpt_lstm.get("num_classes", 3),
+            num_layers=ckpt_lstm.get("num_layers", 2),
+        )
         bilstm.load_state_dict(ckpt_lstm["model_state_dict"])
         bilstm.eval()
         _models_cache["bilstm"] = bilstm
