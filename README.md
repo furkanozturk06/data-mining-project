@@ -123,8 +123,8 @@ Proje, Streamlit tabanlı 4 sekmeli bir web uygulaması içerir:
 
 ## Proje Raporu ve Ekran Görüntüleri
 
-- **Final Raporu (IEEE formatında):** [rapor.pdf](rapor.pdf) · [rapor.docx](rapor.docx)
-- **Arayüz ve analiz ekran görüntüleri:** [`görseller/`](görseller/) klasöründe yer alır — Duygu Testi, Firma Arama, Kelime Bulutu ve Kelime Analizi sekmelerinin gerçek görünümleri ile sınıf bazında kelime bulutu ve TF-IDF analizleri.
+- **Final Raporu (IEEE formatında):** [rapor.pdf](reports/rapor.pdf) · [rapor.docx](reports/rapor.docx)
+- **Arayüz ve analiz ekran görüntüleri:** [`visuals/`](visuals/) klasöründe yer alır; Duygu Testi, Firma Arama, Kelime Bulutu ve Kelime Analizi sekmelerinin gerçek görünümleri ile sınıf bazında kelime bulutu ve TF-IDF analizleri.
 
 ---
 
@@ -167,6 +167,7 @@ musteri-memnuniyet-analizi/
 │   │   └── groq_label_reviews.py     # Çelişkili yorumları Groq ile etiketleme
 │   ├── modeling/
 │   │   ├── train_baseline.py         # 4 modelin eğitimi ve karşılaştırması
+│   │   ├── vocabulary.py             # Tokenizer / kelime sözlüğü (Vocabulary)
 │   │   └── evaluate_llm.py           # Llama 3 zero-shot değerlendirme
 │   ├── nlp/
 │   │   ├── sentiment.py              # BERT tahmini + attention ağırlıkları
@@ -176,9 +177,11 @@ musteri-memnuniyet-analizi/
 │   └── ui/
 │       └── app.py                    # Streamlit arayüzü
 │
-├── görseller/                        # Arayüz ve analiz ekran görüntüleri
-├── rapor.docx                        # Final raporu (IEEE formatı)
-├── rapor.pdf                         # Final raporu (PDF)
+├── visuals/                          # Arayüz ve analiz ekran görüntüleri
+├── reports/                          # Final raporu (IEEE formatı)
+│   ├── rapor.docx                    # Word
+│   └── rapor.pdf                     # PDF
+├── docs/                             # Proje dokümantasyonu (mimari notu)
 ├── requirements.txt
 ├── Veri_Madenciligi_Ön_Sunum.pptx
 └── README.md
