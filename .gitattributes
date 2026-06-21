@@ -1,0 +1,16 @@
+# Satir sonlarini depoda LF olarak normalize et (uygulama Streamlit/Linux uzerinde calisir).
+# Bu, Windows/Mac/Linux arasindaki CRLF/LF farkindan kaynaklanan gereksiz degisiklikleri
+# ve "LF will be replaced by CRLF" uyarisini engeller.
+* text=auto eol=lf
+
+# Ikili dosyalar: git bunlari metin gibi acip satir sonu donusturmesin veya diff almasin
+# (model/gorsel/rapor dosyalarinin bozulmamasi icin onemli).
+*.pkl  binary
+*.pt   binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.pdf  binary
+*.docx binary
+*.pptx binary
+*.csv  binary
